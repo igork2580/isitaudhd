@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5B9A8B;
+  --color-primary-light: #7BB5A8;
+  --color-primary-dark: #4A7E71;
+  --color-secondary: #E8846B;
+  --color-secondary-light: #F0A08D;
+  --color-secondary-dark: #D06A52;
+  --color-accent: #B4A7D6;
+  --color-accent-light: #CCC2E3;
+  --color-accent-dark: #9B8BC4;
+  --color-success: #87A96B;
+  --color-warning: #E8C547;
+  --color-surface: #FFFFFF;
+  --color-background: #FDF8F4;
+  --color-background-dark: #1A1A2E;
+  --color-text: #2D2D2D;
+  --color-text-light: #6B6B6B;
+  --color-text-dark-mode: #E8E0D8;
+  --color-border: #E8E0D8;
+
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-dark-mode);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: white;
+  }
+}

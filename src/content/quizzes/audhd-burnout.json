@@ -1,0 +1,171 @@
+{
+  "id": "audhd-burnout",
+  "title": "AuDHD Burnout Check",
+  "description": "A 15-question check-in for people with autism, ADHD, or both to assess burnout levels. Covers emotional exhaustion, masking fatigue, and executive function shutdown.",
+  "estimatedTime": "4 minutes",
+  "categories": ["emotional-exhaustion", "masking-fatigue", "executive-shutdown"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "I feel emotionally drained by the end of the day, even when nothing particularly stressful happened.",
+      "type": "frequency",
+      "category": "emotional-exhaustion",
+      "weight": 1
+    },
+    {
+      "id": "q2",
+      "text": "Small inconveniences (a dropped spoon, a slow-loading page, a confusing text message) trigger a wave of frustration or tears that feels way out of proportion.",
+      "type": "frequency",
+      "category": "emotional-exhaustion",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "I've lost interest in things I used to be passionate about. My special interests feel flat, and nothing new excites me either.",
+      "type": "frequency",
+      "category": "emotional-exhaustion",
+      "weight": 1
+    },
+    {
+      "id": "q4",
+      "text": "I feel physically unwell (headaches, muscle tension, stomach issues, fatigue) without a clear medical cause, and it seems connected to how overwhelmed I am.",
+      "type": "frequency",
+      "category": "emotional-exhaustion",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "I catch myself thinking \"I can't do this anymore\" about everyday tasks like cooking, answering emails, or getting dressed.",
+      "type": "frequency",
+      "category": "emotional-exhaustion",
+      "weight": 1
+    },
+    {
+      "id": "q6",
+      "text": "I spend so much energy appearing \"normal\" in social or work situations that I collapse (mentally or physically) the moment I'm alone.",
+      "type": "frequency",
+      "category": "masking-fatigue",
+      "weight": 1
+    },
+    {
+      "id": "q7",
+      "text": "I suppress my natural reactions (not stimming, forcing eye contact, monitoring my tone and facial expressions) throughout the day because I'm afraid of being judged.",
+      "type": "frequency",
+      "category": "masking-fatigue",
+      "weight": 1
+    },
+    {
+      "id": "q8",
+      "text": "I feel like I'm performing a character at work or in social situations rather than being myself, and the gap between the performance and the real me keeps growing.",
+      "type": "frequency",
+      "category": "masking-fatigue",
+      "weight": 1
+    },
+    {
+      "id": "q9",
+      "text": "I avoid social interactions I used to handle fine, not because I dislike people, but because I don't have the energy to maintain the mask anymore.",
+      "type": "frequency",
+      "category": "masking-fatigue",
+      "weight": 1
+    },
+    {
+      "id": "q10",
+      "text": "My sensory tolerance has decreased noticeably. Sounds, lights, or textures that I used to manage now feel unbearable, as if my filters are breaking down.",
+      "type": "frequency",
+      "category": "masking-fatigue",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "Basic self-care tasks (showering, brushing teeth, preparing food) feel like they require enormous effort, even though I know they're simple.",
+      "type": "frequency",
+      "category": "executive-shutdown",
+      "weight": 1
+    },
+    {
+      "id": "q12",
+      "text": "I stare at my to-do list or my phone or the wall for long stretches, unable to initiate any action at all. My brain feels like it's buffering.",
+      "type": "frequency",
+      "category": "executive-shutdown",
+      "weight": 1
+    },
+    {
+      "id": "q13",
+      "text": "I forget things I never used to forget: appointments, whether I ate lunch, conversations I had yesterday, where I put something five minutes ago.",
+      "type": "frequency",
+      "category": "executive-shutdown",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "Making even minor decisions (what to eat, what to watch, whether to reply to a message) feels paralyzing. The decision itself takes more energy than the task would.",
+      "type": "frequency",
+      "category": "executive-shutdown",
+      "weight": 1
+    },
+    {
+      "id": "q15",
+      "text": "I need significantly more recovery time after activities that used to be manageable. A grocery run or a work meeting now requires hours of doing nothing afterward.",
+      "type": "frequency",
+      "category": "executive-shutdown",
+      "weight": 1
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["burnout"],
+    "maxPerAxis": 60,
+    "profiles": [
+      {
+        "id": "severe-burnout",
+        "title": "Severe Burnout Risk",
+        "emoji": "🔥",
+        "description": "Your responses indicate a high level of burnout across emotional exhaustion, masking fatigue, and executive function shutdown. This level of burnout doesn't resolve on its own with a weekend off. It typically means your nervous system has been running in survival mode for too long, and your capacity has genuinely reduced, not because you're weak, but because you've been operating beyond sustainable limits.",
+        "recommendations": [
+          "Reduce demands immediately, wherever possible. This isn't about willpower or pushing through. Cancel what you can cancel, delegate what you can delegate, and lower your standards temporarily on everything that isn't essential to survival.",
+          "Drop the mask in at least one safe environment. If you have a trusted person, let them see the unfiltered version of you. Masking while burned out accelerates the breakdown.",
+          "Prioritize sensory comfort aggressively: dark rooms, soft clothing, noise-canceling headphones, familiar safe foods. Your nervous system needs the equivalent of a reboot, and reducing sensory load is the fastest path.",
+          "Seek professional support if you can access it. Burnout at this level can mimic depression, and a clinician who understands neurodivergent burnout (not just workplace burnout) can help you build a recovery plan that actually fits your brain."
+        ],
+        "condition": { "burnout": 45 }
+      },
+      {
+        "id": "significant-burnout",
+        "title": "Significant Burnout Signs",
+        "emoji": "⚠️",
+        "description": "Your responses show clear signs of burnout building up. You're still functioning, but the cost of that functioning is getting higher. The things that used to recharge you might not be working as well anymore, and you're probably spending more energy managing yourself than actually living your life. This is the stage where intervention makes the biggest difference, before it tips into full collapse.",
+        "recommendations": [
+          "Audit your weekly obligations and identify at least two things you can reduce, pause, or eliminate. Burnout recovery requires creating actual space, not just \"trying to relax\" while maintaining the same load.",
+          "Start tracking your energy, not your productivity. Notice what drains you and what genuinely restores you (not what you think should restore you, but what actually does).",
+          "Practice unmasking in small, safe moments. Let yourself stim openly at home. Skip the forced smile on video calls. These micro-recoveries add up.",
+          "Build in \"nothing time\" that isn't screen time. Lying on the floor, sitting outside, staring at the ceiling. Your brain needs genuine downtime without input."
+        ],
+        "condition": { "burnout": 30 }
+      },
+      {
+        "id": "moderate-burnout",
+        "title": "Moderate Stress Levels",
+        "emoji": "🌤️",
+        "description": "Your responses suggest some burnout-adjacent stress, but you're not in crisis territory. You might notice occasional exhaustion, some masking fatigue, or periods where executive function dips. These are worth paying attention to because neurodivergent burnout tends to build slowly and then hit all at once.",
+        "recommendations": [
+          "Use this as a baseline. Take this check-in again in a month or two and compare. Catching an upward trend early is much easier to address than catching full burnout.",
+          "Identify your early warning signs (the first things that slip when you're approaching overload) and treat them as real signals, not things to push past.",
+          "Make sure your current recovery strategies are actually working. Sometimes we default to habits (scrolling, binge-watching) that feel like rest but don't actually restore capacity."
+        ],
+        "condition": { "burnout": 18 }
+      },
+      {
+        "id": "low-burnout",
+        "title": "Managing Well",
+        "emoji": "🌈",
+        "description": "Your responses suggest you're currently managing your energy and demands at a sustainable level. Your masking load, emotional bandwidth, and executive function all seem to be in a workable range right now. That's genuinely good and worth recognizing, because maintaining balance as a neurodivergent person in a neurotypical world takes real skill.",
+        "recommendations": [
+          "Document what's working right now. When burnout eventually shows up (and it tends to be cyclical for neurodivergent people), having a record of what your sustainable life looked like gives you a concrete target to return to.",
+          "Keep checking in with yourself periodically. Burnout sneaks up, especially during transitions (new job, relationship changes, seasonal shifts).",
+          "If you're managing well because your current environment is a good fit, be thoughtful about changes that might disrupt that fit. Knowing what works for you is valuable information worth protecting."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}

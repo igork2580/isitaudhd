@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuizCard from '../../components/QuizCard.astro';
+---
+
+<BaseLayout
+  title="AuDHD Quizzes"
+  description="Free quizzes to explore AuDHD traits — the overlap of autism and ADHD. Self-assessments for burnout, masking, sensory processing, and more."
+>
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <div class="text-center mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">AuDHD Quizzes</h1>
+      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto">
+        Explore different aspects of the autism + ADHD overlap. Each quiz takes
+        just a few minutes and your results are instant.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <QuizCard
+        title="Is It AuDHD?"
+        description="Our flagship quiz. Explore whether you show traits of both autism and ADHD — the hallmark of AuDHD."
+        href="/quiz/is-it-audhd/"
+        estimatedTime="5-8 min"
+        questionCount={30}
+        emoji="🧠"
+        featured={true}
+      />
+      <QuizCard
+        title="Autism, ADHD, or Both?"
+        description="Not sure which one fits? This quiz helps you see where your traits lean — autism, ADHD, or the overlap."
+        href="/quiz/autism-or-adhd/"
+        estimatedTime="4-6 min"
+        questionCount={20}
+        emoji="🎭"
+      />
+      <QuizCard
+        title="AuDHD Burnout Check"
+        description="Neurodivergent burnout hits different. Check if you're running on empty from masking, overload, or executive shutdown."
+        href="/quiz/audhd-burnout/"
+        estimatedTime="3-5 min"
+        questionCount={15}
+        emoji="🔥"
+      />
+    </div>
+
+    <div class="mt-12 bg-accent/10 rounded-[--radius-xl] p-6 sm:p-8 text-center">
+      <p class="text-text-light leading-relaxed">
+        These quizzes are for self-exploration only and are not diagnostic tools.
+        If your results resonate with you, we encourage you to speak with a qualified
+        mental health professional who specializes in neurodivergence.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,317 @@
+{
+  "id": "autism-or-adhd",
+  "title": "Autism, ADHD, or Both?",
+  "description": "A 20-question differential quiz that helps you explore whether your experiences lean more toward autism, ADHD, or the AuDHD overlap. Compare real-world scenarios and see which pattern fits.",
+  "estimatedTime": "6 minutes",
+  "categories": ["autism-indicators", "adhd-indicators", "both-indicators"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "You walk into a crowded coffee shop. What hits you first?",
+      "type": "scenario",
+      "category": "autism-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "The noise, the smells, the lighting. My senses start competing for attention and I need a moment to adjust before I can even think about ordering.",
+          "value": 4
+        },
+        {
+          "label": "I notice the atmosphere but it doesn't particularly bother me. I might get distracted by the menu or people-watching, though.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "When someone cancels plans, my honest reaction is usually relief rather than disappointment.",
+      "type": "likert",
+      "category": "autism-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "A friend makes a joke and everyone laughs. You don't get it. What happens next?",
+      "type": "scenario",
+      "category": "autism-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I laugh along anyway because I've learned the timing, but internally I'm replaying the sentence trying to decode what made it funny.",
+          "value": 4
+        },
+        {
+          "label": "I just ask them to explain it, or I move on without thinking about it much.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "I've developed a set of social scripts and rules that I consciously follow in conversations, rather than relying on intuition.",
+      "type": "likert",
+      "category": "autism-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "You discover a new restaurant you really like. What happens next?",
+      "type": "scenario",
+      "category": "autism-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I order the exact same meal every single time I go. I found what works; why would I risk trying something else?",
+          "value": 4
+        },
+        {
+          "label": "I try different things on the menu each visit. Half the fun is exploring what else they have.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "I need to understand the system or logic behind something before I can engage with it. \"Just do it this way because it works\" is deeply unsatisfying.",
+      "type": "likert",
+      "category": "autism-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q7",
+      "text": "How do you handle an unexpected change to your morning routine?",
+      "type": "scenario",
+      "category": "autism-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "It derails me. Even a small disruption (coffee maker broken, construction on my usual route) can create a cascading sense of wrongness that takes hours to shake.",
+          "value": 4
+        },
+        {
+          "label": "It's annoying but I adapt quickly. I might even enjoy the novelty of doing things differently.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "I experience physical discomfort from sensory input that most people seem to ignore entirely (seams in socks, humming electronics, fluorescent light flicker).",
+      "type": "likert",
+      "category": "autism-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q9",
+      "text": "You sit down to work on an important project. What actually happens?",
+      "type": "scenario",
+      "category": "adhd-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I open the file, then check my phone, then remember I need to reply to an email, then get a snack, then reorganize my desk, and suddenly it's 3 PM and I haven't started.",
+          "value": 4
+        },
+        {
+          "label": "I either dive in deeply or I decide not to do it. The issue isn't bouncing between tasks; it's choosing whether to engage at all.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "I make impulsive purchases or decisions that feel completely right in the moment but confusing an hour later.",
+      "type": "likert",
+      "category": "adhd-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "How does your interest in hobbies typically work?",
+      "type": "scenario",
+      "category": "adhd-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I cycle through hobbies rapidly. I'll be obsessed with something for two weeks, buy all the gear, then completely forget about it when the next thing grabs me.",
+          "value": 4
+        },
+        {
+          "label": "I tend to stick with the same interests for years, going deeper and deeper. Switching to something new is rare for me.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "I know exactly what I need to do and roughly how long it will take, but I physically cannot make myself start until the pressure becomes unbearable.",
+      "type": "likert",
+      "category": "adhd-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q13",
+      "text": "My thoughts move so fast that by the time I start explaining one idea, I've already jumped three topics ahead in my own mind.",
+      "type": "likert",
+      "category": "adhd-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "Someone is telling you a long story. What's your experience?",
+      "type": "scenario",
+      "category": "adhd-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "My mind wanders constantly. I catch myself thinking about dinner or a song lyric, then snap back and hope I didn't miss anything important.",
+          "value": 4
+        },
+        {
+          "label": "I can follow it, but if the story has no clear point or structure, I get frustrated by the inefficiency of the telling rather than losing focus.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "You agreed to meet a friend at 2 PM. It's now 1:45. What's happening?",
+      "type": "scenario",
+      "category": "adhd-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I just realized it's 1:45. I haven't showered, can't find my keys, and I'm going to text them \"leaving now\" while still in my pajamas.",
+          "value": 4
+        },
+        {
+          "label": "I've been ready since 1:30 and I'm watching the clock, waiting for the exact right moment to leave so I arrive precisely on time.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "My emotional reactions to small setbacks (a dropped plate, a misplaced file) feel disproportionate. I know it's not a big deal, but the frustration floods in anyway.",
+      "type": "likert",
+      "category": "adhd-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q17",
+      "text": "I feel exhausted after social situations, but I also feel restless and understimulated when I've been alone too long. Neither state feels comfortable for very long.",
+      "type": "likert",
+      "category": "both-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q18",
+      "text": "You have a free Saturday with no obligations. What happens?",
+      "type": "scenario",
+      "category": "both-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I want to deep-dive into a project AND I want to do five different things AND I want to do nothing. The conflict between these urges paralyzes me, and I end up doing none of them while feeling guilty about all of them.",
+          "value": 4
+        },
+        {
+          "label": "I either pick something and do it, or I genuinely relax. The day doesn't turn into an internal tug-of-war.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "I've been told I'm \"gifted but underperforming\" or \"so smart, if only you'd apply yourself\" throughout my life, and neither the praise nor the criticism ever felt accurate.",
+      "type": "likert",
+      "category": "both-indicators",
+      "weight": 1
+    },
+    {
+      "id": "q20",
+      "text": "How do you handle a task that's boring but necessary?",
+      "type": "scenario",
+      "category": "both-indicators",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I build an elaborate system to make it interesting (color-coded spreadsheet, specific playlist, gamified checklist), then lose interest in maintaining the system itself within a week.",
+          "value": 4
+        },
+        {
+          "label": "I either push through it without much fuss or I avoid it, but I don't usually build complex workarounds.",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["autism", "adhd"],
+    "maxPerAxis": 48,
+    "profiles": [
+      {
+        "id": "likely-both",
+        "title": "Likely Both — AuDHD",
+        "emoji": "🎭",
+        "description": "Your responses suggest a strong presence of both autistic and ADHD traits. You likely relate to experiences from both categories, plus the distinctive friction that happens when they coexist. The autism wants structure; the ADHD rebels against it. The ADHD craves novelty; the autism finds change distressing. Living with both means constantly negotiating between these competing needs.",
+        "recommendations": [
+          "Seek out AuDHD-specific content creators and communities. People who live at this intersection understand the contradictions in a way that single-diagnosis resources often miss.",
+          "If you're considering professional assessment, look for clinicians who evaluate autism and ADHD together rather than treating them as mutually exclusive (some older diagnostic frameworks still do this).",
+          "Give yourself permission to have contradictory needs. Wanting routine AND novelty isn't a character flaw; it's a neurological reality that requires creative solutions.",
+          "Experiment with \"structured spontaneity\" in your daily life: fixed anchor points (meals, sleep, work blocks) with flexible everything else."
+        ],
+        "condition": { "autism": 28, "adhd": 28 }
+      },
+      {
+        "id": "more-autism",
+        "title": "Leaning Autism",
+        "emoji": "🧩",
+        "description": "Your responses align more closely with autistic experiences than ADHD ones. Sensory processing, social communication patterns, preference for sameness, and deep focused interests seem to resonate most with you. Some ADHD-adjacent traits might show up, but the autistic thread is stronger in your self-report.",
+        "recommendations": [
+          "Look into autistic community resources. Actually Autistic voices (the #ActuallyAutistic hashtag is a good starting point) offer perspective that clinical descriptions often lack.",
+          "Map your sensory profile: which senses are hypersensitive, which are hyposensitive? This knowledge makes it much easier to design comfortable environments.",
+          "If executive function is still a struggle despite low ADHD scores, look into autistic inertia, which presents differently from ADHD executive dysfunction but can be just as disabling."
+        ],
+        "condition": { "autism": 28, "adhd": 0 }
+      },
+      {
+        "id": "more-adhd",
+        "title": "Leaning ADHD",
+        "emoji": "🚀",
+        "description": "Your responses align more closely with ADHD experiences. Attention regulation, impulsivity, time blindness, and emotional reactivity seem to be the dominant patterns. You may have some autistic traits, but ADHD appears to be the primary neurotype shaping your daily experience.",
+        "recommendations": [
+          "Explore ADHD management strategies that go beyond \"use a planner.\" Body doubling, accountability partners, and working with your natural energy rhythms tend to be more effective than fighting against them.",
+          "Don't overlook the emotional component. ADHD emotional dysregulation is a core feature, not a side effect, and managing it can improve every other area of functioning.",
+          "If you suspect ADHD, a professional evaluation can open doors to medication, accommodations, and coaching that make a real difference for many people."
+        ],
+        "condition": { "adhd": 28, "autism": 0 }
+      },
+      {
+        "id": "some-traits",
+        "title": "Some Neurodivergent Traits",
+        "emoji": "💫",
+        "description": "Your responses show some neurodivergent traits without a strong lean in either direction. You might be someone whose traits are present but well-compensated, or someone who relates to specific aspects of autism or ADHD without the full picture. Subclinical traits are real and can still affect your life.",
+        "recommendations": [
+          "Pay attention to which specific questions resonated most. Even without a strong overall pattern, individual traits (sensory sensitivity, time blindness, social scripting) can benefit from targeted strategies.",
+          "Consider whether masking or compensation might be suppressing how strongly these traits show up in a self-report. Many people, especially women and late-identified individuals, learn to camouflage so effectively that they underestimate their own traits.",
+          "Neurodivergent-friendly strategies (visual timers, noise-canceling headphones, body doubling) can help anyone, regardless of diagnosis status."
+        ],
+        "condition": { "autism": 16, "adhd": 0 }
+      },
+      {
+        "id": "low",
+        "title": "Fewer Traits Detected",
+        "emoji": "🌿",
+        "description": "Based on your responses, this quiz didn't detect strong autism or ADHD patterns. This doesn't rule anything out. Self-report quizzes have real limitations, especially for people who've spent years masking or adapting. If your lived experience tells you something is different about how your brain works, that instinct is worth following up on.",
+        "recommendations": [
+          "If you came to this quiz because something specific prompted you (a friend's suggestion, a relatable social media post, a frustrating pattern in your life), pursue that thread regardless of this result.",
+          "Consider taking this quiz again with someone who knows you well offering their perspective. Self-perception and external perception can differ significantly.",
+          "Talk to a professional if your gut says something is there. Quizzes are conversation starters, not conversation enders."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}

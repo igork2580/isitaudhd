@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Newsletter — AuDHD Insights"
+  description="Subscribe to AuDHD Insights — a weekly newsletter about living with autism and ADHD. New quizzes, research updates, and practical strategies."
+>
+  <section class="max-w-2xl mx-auto px-4 sm:px-6 py-16 text-center">
+    <div class="text-4xl mb-4">💌</div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-text">AuDHD Insights</h1>
+    <p class="mt-4 text-lg text-text-light leading-relaxed">
+      A weekly newsletter for people exploring the autism + ADHD overlap.
+      New quizzes, research updates, and practical strategies — delivered
+      in a way that works for neurodivergent brains.
+    </p>
+
+    <form
+      class="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+      id="newsletter-form"
+    >
+      <input
+        type="email"
+        name="email"
+        placeholder="your@email.com"
+        required
+        class="flex-1 px-5 py-3.5 rounded-[--radius-lg] border-2 border-border focus:border-primary focus:outline-none text-text bg-surface text-base"
+      />
+      <button
+        type="submit"
+        class="px-8 py-3.5 rounded-[--radius-lg] font-semibold bg-primary text-white hover:bg-primary-dark transition-colors text-base"
+      >
+        Subscribe
+      </button>
+    </form>
+
+    <p class="mt-3 text-sm text-text-light">
+      Free forever. No spam. Unsubscribe anytime.
+    </p>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+      <div class="bg-surface rounded-[--radius-lg] p-5 border border-border">
+        <div class="text-2xl mb-2">🧠</div>
+        <h3 class="font-semibold text-text text-sm">New Quizzes</h3>
+        <p class="text-sm text-text-light mt-1">Be the first to try new self-assessments as we release them</p>
+      </div>
+      <div class="bg-surface rounded-[--radius-lg] p-5 border border-border">
+        <div class="text-2xl mb-2">📚</div>
+        <h3 class="font-semibold text-text text-sm">Research Digest</h3>
+        <p class="text-sm text-text-light mt-1">Latest AuDHD research, summarized in plain language</p>
+      </div>
+      <div class="bg-surface rounded-[--radius-lg] p-5 border border-border">
+        <div class="text-2xl mb-2">🛠️</div>
+        <h3 class="font-semibold text-text text-sm">Practical Tips</h3>
+        <p class="text-sm text-text-light mt-1">Strategies that actually work for the AuDHD brain</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('newsletter-form');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button');
+    if (btn) {
+      btn.textContent = 'Subscribed! ✓';
+      btn.disabled = true;
+      btn.classList.add('opacity-70');
+    }
+    // TODO: integrate with email service
+  });
+</script>

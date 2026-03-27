@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { QuizPlayer } from '../../components/quiz/QuizPlayer';
+import quizData from '../../content/quizzes/audhd-burnout.json';
+---
+
+<BaseLayout
+  title="AuDHD Burnout Check — Free Assessment"
+  description="Are you experiencing neurodivergent burnout? This free 15-question quiz checks for signs of masking fatigue, executive shutdown, and emotional exhaustion."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <header class="text-center mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">
+        AuDHD <span class="text-secondary">Burnout</span> Check
+      </h1>
+      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
+        Neurodivergent burnout is real — and it looks different from typical burnout.
+        It comes from masking, sensory overload, and the constant effort of navigating
+        a world not built for your brain. This quiz checks where you're at.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
+        <span>🕐 {quizData.estimatedTime}</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>📝 {quizData.questions.length} questions</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>🔒 Private</span>
+      </div>
+    </header>
+
+    <QuizPlayer quiz={quizData} client:load />
+
+    <section class="mt-16 space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-text mb-4">What Is AuDHD Burnout?</h2>
+        <p class="text-text-light leading-relaxed">
+          AuDHD burnout combines the exhaustion of autistic burnout (from sustained masking
+          and sensory overload) with ADHD-related executive function collapse. It can look
+          like losing the ability to do things that used to feel easy, withdrawing from
+          people and activities, losing interest in your special interests, and a deep
+          fatigue that sleep doesn't fix.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-text mb-4">Signs You Might Be Burned Out</h2>
+        <ul class="text-text-light leading-relaxed space-y-2">
+          <li class="flex gap-2"><span class="text-secondary">•</span> Tasks that used to be easy now feel impossibly hard</li>
+          <li class="flex gap-2"><span class="text-secondary">•</span> You can't maintain the "mask" you usually wear in social situations</li>
+          <li class="flex gap-2"><span class="text-secondary">•</span> Your sensory sensitivities have gotten noticeably worse</li>
+          <li class="flex gap-2"><span class="text-secondary">•</span> You've lost interest in things you usually love</li>
+          <li class="flex gap-2"><span class="text-secondary">•</span> You feel physically exhausted even without physical exertion</li>
+          <li class="flex gap-2"><span class="text-secondary">•</span> Small decisions feel overwhelming</li>
+        </ul>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

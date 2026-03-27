@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { QuizPlayer } from '../../components/quiz/QuizPlayer';
+import quizData from '../../content/quizzes/is-it-audhd.json';
+---
+
+<BaseLayout
+  title="Is It AuDHD? — Free Self-Assessment Quiz"
+  description="Take this free 30-question quiz to explore whether you show traits of both autism and ADHD (AuDHD). Takes 5-8 minutes. Instant results."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <!-- SEO intro content -->
+    <header class="text-center mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">
+        Is It AuDHD? <span class="text-primary">Free Quiz</span>
+      </h1>
+      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
+        Do you feel like you have traits of both autism and ADHD? You're not alone.
+        This quiz explores how autism and ADHD traits can overlap and interact —
+        a combination often called <strong class="text-text">AuDHD</strong>.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
+        <span>🕐 {quizData.estimatedTime}</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>📝 {quizData.questions.length} questions</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>🔒 Private</span>
+      </div>
+    </header>
+
+    <!-- Quiz player (React island) -->
+    <QuizPlayer quiz={quizData} client:load />
+
+    <!-- SEO content below quiz -->
+    <section class="mt-16 space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-text mb-4">What Does This Quiz Measure?</h2>
+        <p class="text-text-light leading-relaxed">
+          This quiz explores three areas: <strong class="text-text">autism traits</strong>
+          (social communication differences, sensory sensitivities, need for routine),
+          <strong class="text-text">ADHD traits</strong> (attention regulation, impulsivity,
+          restlessness), and <strong class="text-text">overlap traits</strong> — the unique
+          patterns that emerge when both are present, like hyperfocusing on special interests
+          but struggling with mundane tasks, or needing structure but getting bored by it.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-text mb-4">Who Is This Quiz For?</h2>
+        <p class="text-text-light leading-relaxed">
+          This quiz is for adults who suspect they might have traits of both autism and ADHD.
+          It's especially relevant if you've been diagnosed with one but suspect the other
+          might also apply, or if you've never been assessed but relate to experiences
+          described by the AuDHD community.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-text mb-4">Is This a Diagnosis?</h2>
+        <p class="text-text-light leading-relaxed">
+          No. This quiz is a self-exploration tool, not a clinical assessment. It cannot
+          replace a professional evaluation. If your results suggest AuDHD traits, consider
+          speaking with a psychologist or psychiatrist who has experience with
+          neurodivergence — ideally one who understands how autism and ADHD co-occur.
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

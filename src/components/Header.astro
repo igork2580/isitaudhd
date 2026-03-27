@@ -1,0 +1,82 @@
+---
+const navLinks = [
+  { href: '/quiz/', label: 'Quizzes' },
+  { href: '/learn/what-is-audhd/', label: 'What is AuDHD?' },
+  { href: '/learn/', label: 'Learn' },
+  { href: '/about/', label: 'About' },
+];
+---
+
+<header class="bg-surface/80 backdrop-blur-md border-b border-border sticky top-0 z-50">
+  <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 text-xl font-bold text-primary hover:text-primary-dark transition-colors">
+      <span class="text-2xl">∞</span>
+      <span>IsItAuDHD</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-6">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="text-text-light hover:text-primary font-medium transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+          href="/quiz/is-it-audhd/"
+          class="bg-primary text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+        >
+          Take the Quiz
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden p-2 text-text-light hover:text-primary"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-surface">
+    <ul class="px-4 py-4 space-y-3">
+      {navLinks.map((link) => (
+        <li>
+          <a href={link.href} class="block text-text-light hover:text-primary font-medium py-2">
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li class="pt-2">
+        <a
+          href="/quiz/is-it-audhd/"
+          class="block text-center bg-primary text-white px-5 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+        >
+          Take the Quiz
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

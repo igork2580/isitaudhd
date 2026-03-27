@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy policy for IsItAuDHD.com. Learn how we handle your data, quiz answers, and email information."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <h1 class="text-3xl font-bold text-text mb-8">Privacy Policy</h1>
+    <p class="text-text-light mb-8">Last updated: March 2026</p>
+
+    <div class="space-y-6 text-text-light leading-relaxed">
+      <div>
+        <h2 class="text-xl font-semibold text-text mb-3">The Short Version</h2>
+        <p>
+          Your quiz answers never leave your device. We don't track you across the web.
+          If you give us your email, we only use it to send you what you asked for.
+          We don't sell your data. Ever.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-text mb-3">Quiz Data</h2>
+        <p>
+          All quiz processing happens <strong class="text-text">in your browser</strong>.
+          Your answers are stored temporarily in your browser's localStorage so you can
+          resume if you close the tab. They are never sent to our servers. When you
+          clear your browser data, your quiz answers are deleted.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-text mb-3">Email Collection</h2>
+        <p>
+          If you choose to enter your email address (for quiz results or our newsletter),
+          we store it securely and use it only to send you:
+        </p>
+        <ul class="mt-2 space-y-1 list-disc list-inside">
+          <li>Your detailed quiz results (if requested)</li>
+          <li>Our newsletter (if subscribed)</li>
+        </ul>
+        <p class="mt-2">
+          You can unsubscribe at any time using the link in every email. We never sell,
+          rent, or share your email address with third parties.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-text mb-3">Analytics</h2>
+        <p>
+          We use privacy-friendly analytics that do not use cookies or track you
+          across websites. We collect anonymous, aggregated data such as page views
+          and referral sources to understand how people use the site. No personal
+          data is collected through analytics.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-text mb-3">Cookies</h2>
+        <p>
+          This website does not use tracking cookies. The only data stored in your
+          browser is your quiz progress (via localStorage), which you can clear at
+          any time through your browser settings.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-text mb-3">Third-Party Services</h2>
+        <p>
+          We use the following third-party services:
+        </p>
+        <ul class="mt-2 space-y-1 list-disc list-inside">
+          <li><strong class="text-text">Vercel</strong> — website hosting</li>
+          <li><strong class="text-text">Google Fonts</strong> — typography (loaded from Google's CDN)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-semibold text-text mb-3">Contact</h2>
+        <p>
+          If you have questions about this privacy policy, contact us at
+          <strong class="text-text">privacy@isitaudhd.com</strong>.
+        </p>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

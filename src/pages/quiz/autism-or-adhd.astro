@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { QuizPlayer } from '../../components/quiz/QuizPlayer';
+import quizData from '../../content/quizzes/autism-or-adhd.json';
+---
+
+<BaseLayout
+  title="Autism, ADHD, or Both? — Free Differential Quiz"
+  description="Not sure if it's autism, ADHD, or AuDHD? This free 20-question quiz helps you explore where your traits lean. Takes 4-6 minutes."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <header class="text-center mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">
+        Autism, ADHD, or <span class="text-primary">Both?</span>
+      </h1>
+      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
+        Autism and ADHD share some surface similarities but differ in important ways.
+        This quiz helps you explore which traits feel most like your experience — and
+        whether the overlap (AuDHD) might be the best fit.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
+        <span>🕐 {quizData.estimatedTime}</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>📝 {quizData.questions.length} questions</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>🔒 Private</span>
+      </div>
+    </header>
+
+    <QuizPlayer quiz={quizData} client:load />
+
+    <section class="mt-16 space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-text mb-4">How Is This Quiz Different?</h2>
+        <p class="text-text-light leading-relaxed">
+          Unlike our flagship AuDHD quiz, this one focuses on <strong class="text-text">differentiating</strong>
+          between autism and ADHD. Many traits look similar on the surface — social difficulties,
+          sensory issues, executive function challenges — but the underlying reasons can be
+          quite different. This quiz presents scenarios where autism-typical and ADHD-typical
+          responses diverge, helping you see which pattern fits you better.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-text mb-4">Why Does It Matter Which One?</h2>
+        <p class="text-text-light leading-relaxed">
+          Understanding whether your traits are more autism-related, ADHD-related, or both
+          can help with self-understanding, seeking the right kind of support, and finding
+          strategies that actually work for your brain. What helps ADHD (like novelty and
+          stimulation) can sometimes clash with what helps autism (like predictability and routine)
+          — and knowing you have both can explain why some advice never quite fits.
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

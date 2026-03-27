@@ -1,17 +1,134 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuizCard from '../components/QuizCard.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Home"
+  description="Free AuDHD quizzes to explore if you have both autism and ADHD. Understand the overlap, take self-assessments, and learn what AuDHD means for you."
+>
+  <!-- Hero -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 bg-accent/15 text-accent-dark px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+      <span>∞</span>
+      <span>Free self-assessment quizzes</span>
+    </div>
+
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text leading-tight">
+      Is it autism, ADHD,<br />
+      <span class="text-primary">or both?</span>
+    </h1>
+
+    <p class="mt-6 text-lg sm:text-xl text-text-light max-w-2xl mx-auto leading-relaxed">
+      Explore traits of AuDHD — the overlap of autism and ADHD — with free,
+      research-informed quizzes. No sign-up required.
+    </p>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/quiz/is-it-audhd/"
+        class="inline-flex items-center justify-center px-8 py-4 rounded-[--radius-lg] font-semibold bg-primary text-white hover:bg-primary-dark transition-colors text-lg"
+      >
+        Take the AuDHD Quiz
+      </a>
+      <a
+        href="/learn/what-is-audhd/"
+        class="inline-flex items-center justify-center px-8 py-4 rounded-[--radius-lg] font-semibold border-2 border-border text-text hover:border-primary hover:text-primary transition-colors text-lg"
+      >
+        What is AuDHD?
+      </a>
+    </div>
+
+    <p class="mt-4 text-sm text-text-light">
+      Takes 5-8 minutes. Not a diagnostic tool.
+    </p>
+  </section>
+
+  <!-- Featured quizzes -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl font-bold text-text mb-8 text-center">
+      Choose a quiz
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <QuizCard
+        title="Is It AuDHD?"
+        description="Our flagship quiz. Explore whether you show traits of both autism and ADHD — the hallmark of AuDHD."
+        href="/quiz/is-it-audhd/"
+        estimatedTime="5-8 min"
+        questionCount={30}
+        emoji="🧠"
+        featured={true}
+      />
+      <QuizCard
+        title="Autism, ADHD, or Both?"
+        description="Not sure which one fits? This quiz helps you see where your traits lean — autism, ADHD, or the overlap."
+        href="/quiz/autism-or-adhd/"
+        estimatedTime="4-6 min"
+        questionCount={20}
+        emoji="🎭"
+      />
+      <QuizCard
+        title="AuDHD Burnout Check"
+        description="Neurodivergent burnout hits different. Check if you're running on empty from masking, overload, or executive shutdown."
+        href="/quiz/audhd-burnout/"
+        estimatedTime="3-5 min"
+        questionCount={15}
+        emoji="🔥"
+      />
+    </div>
+  </section>
+
+  <!-- What is AuDHD section -->
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl font-bold text-text mb-6">
+      What is AuDHD?
+    </h2>
+    <div class="space-y-4 text-text-light text-lg leading-relaxed">
+      <p>
+        <strong class="text-text">AuDHD</strong> is a community term for having both
+        <strong class="text-text">autism</strong> and <strong class="text-text">ADHD</strong>
+        at the same time. Research shows that 30-50% of autistic people also meet criteria
+        for ADHD, and the overlap creates a unique experience that's different from having
+        either condition alone.
+      </p>
+      <p>
+        People with AuDHD often describe contradictory traits: craving routine <em>and</em>
+        getting bored by it. Needing deep focus <em>and</em> being unable to control what
+        you focus on. Wanting social connection <em>and</em> finding it overwhelming.
+      </p>
+      <p>
+        If this sounds familiar, our quizzes can help you explore these patterns.
+        They're not a diagnosis — but they can be a helpful first step toward understanding
+        yourself better.
+      </p>
+    </div>
+    <a
+      href="/learn/what-is-audhd/"
+      class="inline-block mt-6 text-primary hover:text-primary-dark font-medium transition-colors"
+    >
+      Learn more about AuDHD &rarr;
+    </a>
+  </section>
+
+  <!-- Trust signals -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12 border-t border-border">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+      <div>
+        <div class="text-3xl mb-2">📊</div>
+        <h3 class="font-semibold text-text">Research-Informed</h3>
+        <p class="text-sm text-text-light mt-1">Quizzes based on current neurodivergence research</p>
+      </div>
+      <div>
+        <div class="text-3xl mb-2">🔒</div>
+        <h3 class="font-semibold text-text">Private & Free</h3>
+        <p class="text-sm text-text-light mt-1">No sign-up needed. Your answers stay on your device.</p>
+      </div>
+      <div>
+        <div class="text-3xl mb-2">♾️</div>
+        <h3 class="font-semibold text-text">Built for ND Brains</h3>
+        <p class="text-sm text-text-light mt-1">Sensory-friendly design with no flashing or clutter</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

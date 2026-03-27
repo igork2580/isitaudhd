@@ -1,0 +1,317 @@
+{
+  "id": "is-it-audhd",
+  "title": "Is It AuDHD?",
+  "description": "A 30-question self-assessment exploring the overlap between autism and ADHD traits. Not a diagnosis, but a starting point for understanding your neurodivergent experiences.",
+  "estimatedTime": "8 minutes",
+  "categories": ["autism-traits", "adhd-traits", "overlap-traits"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "I can talk about my interests for hours but struggle to maintain a casual conversation about someone's weekend.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q2",
+      "text": "Certain textures (clothing tags, specific fabrics, food consistency) cause me genuine distress that others don't seem to understand.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "I rehearse conversations in my head before making a phone call or entering a social situation.",
+      "type": "frequency",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q4",
+      "text": "I notice small changes in my environment (a moved object, a different font, a slight color shift) that nobody else picks up on.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "When my routine gets disrupted unexpectedly, it throws off my entire day, not just the part that changed.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q6",
+      "text": "I've been told I take things too literally or miss sarcasm, even though I consider myself intelligent.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q7",
+      "text": "I find myself stimming (rocking, tapping, fidgeting with objects, humming) especially when I'm thinking or stressed.",
+      "type": "frequency",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q8",
+      "text": "I prefer communicating through text or writing over face-to-face conversation because I can control the pace and think through my words.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q9",
+      "text": "Background noise in restaurants or cafes makes it nearly impossible for me to follow a conversation.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q10",
+      "text": "People describe me as intense, and I'm not sure if that's a compliment or a concern.",
+      "type": "likert",
+      "category": "autism-traits",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "I start new projects with enormous enthusiasm, then abandon them halfway through when something more interesting appears.",
+      "type": "frequency",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q12",
+      "text": "I frequently lose track of time. What feels like 20 minutes turns out to be 2 hours, or vice versa.",
+      "type": "likert",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q13",
+      "text": "My brain feels like a browser with 47 tabs open and I can't figure out which one is playing music.",
+      "type": "likert",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "I procrastinate on important tasks until the deadline pressure finally gives me the adrenaline to start.",
+      "type": "frequency",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q15",
+      "text": "I interrupt people in conversations, not out of rudeness, but because the thought will vanish if I don't say it immediately.",
+      "type": "likert",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q16",
+      "text": "I misplace everyday items (keys, phone, wallet) multiple times a week, sometimes multiple times a day.",
+      "type": "frequency",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q17",
+      "text": "I feel physically restless when I have to sit still for long periods, like something inside me needs to move.",
+      "type": "likert",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q18",
+      "text": "I struggle to start tasks even when I genuinely want to do them. It's not laziness; my brain just won't engage.",
+      "type": "likert",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q19",
+      "text": "My emotions hit fast and hard. A minor frustration can feel overwhelming in the moment, then pass quickly.",
+      "type": "likert",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q20",
+      "text": "I zone out during conversations and realize I have no idea what the other person just said, even when I care about the topic.",
+      "type": "frequency",
+      "category": "adhd-traits",
+      "weight": 1
+    },
+    {
+      "id": "q21",
+      "text": "I need a detailed plan to feel secure, but then I get bored or frustrated trying to follow it step by step.",
+      "type": "likert",
+      "category": "overlap-traits",
+      "weight": 1
+    },
+    {
+      "id": "q22",
+      "text": "I notice tiny details others miss, but somehow lose track of the big picture entirely.",
+      "type": "likert",
+      "category": "overlap-traits",
+      "weight": 1
+    },
+    {
+      "id": "q23",
+      "text": "I cycle between craving social interaction and desperately needing to be completely alone, sometimes within the same day.",
+      "type": "likert",
+      "category": "overlap-traits",
+      "weight": 1
+    },
+    {
+      "id": "q24",
+      "text": "Someone changes plans at the last minute. What do you do?",
+      "type": "scenario",
+      "category": "overlap-traits",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I feel a mix of anxiety about the disruption AND relief that I don't have to do the original thing anymore.",
+          "value": 4
+        },
+        {
+          "label": "I adapt without much trouble or just feel one clear emotion about it.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "text": "I can hyperfocus on something for 8 hours straight without eating or moving, then feel completely unable to do a simple 5-minute task afterward.",
+      "type": "likert",
+      "category": "overlap-traits",
+      "weight": 1
+    },
+    {
+      "id": "q26",
+      "text": "People tell me I'm \"too much\" and \"not enough\" depending on the context, and I've never understood how both can be true.",
+      "type": "likert",
+      "category": "overlap-traits",
+      "weight": 1
+    },
+    {
+      "id": "q27",
+      "text": "You're at a party. How does it go?",
+      "type": "scenario",
+      "category": "overlap-traits",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I either find one person to talk to intensely about a shared interest or I spend the whole time managing sensory overload while also feeling restless and understimulated. Sometimes both at once.",
+          "value": 4
+        },
+        {
+          "label": "I mingle at a comfortable pace or simply decide parties aren't my thing. It's straightforward.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "text": "I feel like I'm running two operating systems at once: one that craves novelty and change, and one that needs predictability and sameness.",
+      "type": "likert",
+      "category": "overlap-traits",
+      "weight": 1
+    },
+    {
+      "id": "q29",
+      "text": "My interests rotate between deep obsessive phases (weeks or months on one topic) and scattered exploration (a new thing every day).",
+      "type": "frequency",
+      "category": "overlap-traits",
+      "weight": 1
+    },
+    {
+      "id": "q30",
+      "text": "You need to get groceries. What happens?",
+      "type": "scenario",
+      "category": "overlap-traits",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I make a detailed list organized by store aisle, then forget the list at home, get overwhelmed by the fluorescent lights, buy 12 things that weren't on the list, and forget the one item I actually needed.",
+          "value": 4
+        },
+        {
+          "label": "I go to the store and buy what I need. Maybe I forget an item or two, but it's not a whole ordeal.",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["autism", "adhd", "overlap"],
+    "maxPerAxis": 40,
+    "profiles": [
+      {
+        "id": "strong-audhd",
+        "title": "Strong AuDHD Traits",
+        "emoji": "🧠✨",
+        "description": "Your responses show a strong presence of both autistic and ADHD traits, along with the characteristic push-pull dynamic where these neurotypes interact. This combination often creates unique experiences that don't fit neatly into either category alone. Many people with this profile spent years feeling like they didn't fully belong in autism or ADHD communities because their experience is genuinely different from either one in isolation.",
+        "recommendations": [
+          "Look into AuDHD-specific communities and resources. Generic autism or ADHD advice often misses the mark because it doesn't account for how the two interact.",
+          "Consider seeking assessment from a professional who understands the autism-ADHD overlap. Many clinicians still treat them as separate, which can lead to incomplete evaluations.",
+          "Build a lifestyle that honors both your need for routine AND your need for novelty. Structured flexibility (consistent anchor points with room to improvise between them) tends to work well.",
+          "Track which environments drain you fastest. The sensory sensitivity of autism combined with the stimulation-seeking of ADHD means your energy management needs are specific to you."
+        ],
+        "condition": { "autism": 24, "adhd": 24, "overlap": 24 }
+      },
+      {
+        "id": "autism-leaning",
+        "title": "More Autism Than ADHD",
+        "emoji": "🔍",
+        "description": "Your responses lean more heavily toward autistic traits than ADHD traits. You likely relate to experiences around sensory sensitivity, deep focus on specific interests, preference for routine, and social communication differences. Some ADHD-like experiences might show up situationally, but autism seems to be the stronger thread.",
+        "recommendations": [
+          "Explore autism-specific resources and communities. Your experience may resonate more with autistic perspectives than ADHD ones.",
+          "Prioritize sensory accommodations in your daily environment. Noise-canceling headphones, controlled lighting, and comfortable clothing can make a measurable difference.",
+          "If you haven't already, consider a formal autism assessment. Late diagnosis is common, especially for women and people who learned to mask early."
+        ],
+        "condition": { "autism": 24, "adhd": 0, "overlap": 0 }
+      },
+      {
+        "id": "adhd-leaning",
+        "title": "More ADHD Than Autism",
+        "emoji": "⚡",
+        "description": "Your responses lean more heavily toward ADHD traits. Challenges with attention, time management, impulsivity, and emotional regulation seem more prominent in your experience than sensory or social communication differences. You might have some autistic traits, but ADHD appears to be the main driver.",
+        "recommendations": [
+          "Look into ADHD-specific strategies for executive function: body doubling, time-blocking with timers, and external accountability systems.",
+          "Physical movement can be a game-changer for ADHD brains. Even a 10-minute walk before a difficult task can shift your ability to focus.",
+          "Consider whether you might benefit from a professional ADHD assessment, especially if you relate to the emotional dysregulation aspects that are often overlooked in standard descriptions."
+        ],
+        "condition": { "adhd": 24, "autism": 0, "overlap": 0 }
+      },
+      {
+        "id": "moderate-overlap",
+        "title": "Moderate AuDHD Traits",
+        "emoji": "🌊",
+        "description": "Your responses suggest a moderate presence of both autistic and ADHD traits, with notable overlap experiences. You might not hit the extremes on either side, but the combination is clearly shaping your daily life. This profile often looks like someone who \"manages fine\" on the surface while spending considerable energy keeping everything together underneath.",
+        "recommendations": [
+          "Start paying attention to your energy patterns. When do you crash? What drains you fastest? This data is more useful than any label.",
+          "Try building \"buffer zones\" into your schedule: transition time between tasks or social events where you can decompress and recalibrate.",
+          "Explore neurodivergent communities even if you don't have a formal diagnosis. Shared strategies and validation can be valuable regardless of where you fall on a clinical scale."
+        ],
+        "condition": { "overlap": 20, "autism": 16, "adhd": 16 }
+      },
+      {
+        "id": "low-traits",
+        "title": "Fewer AuDHD Traits",
+        "emoji": "🌱",
+        "description": "Your responses don't indicate strong AuDHD traits based on this quiz. That said, this is a screening tool, not a diagnosis. If specific experiences brought you here (sensory issues, executive dysfunction, social difficulties), those are still valid and worth exploring even if the overall pattern doesn't point strongly toward AuDHD.",
+        "recommendations": [
+          "If certain questions hit home even though your overall score is low, dig into those specific areas. A low total score doesn't mean individual struggles aren't real.",
+          "Consider whether you might be heavily masking or compensating, which can suppress quiz scores while the underlying traits still affect your daily life.",
+          "If you're still curious, revisit with someone who knows you well and can offer an outside perspective on how these traits show up in your life."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}
