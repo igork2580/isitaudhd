@@ -5,18 +5,16 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<nav aria-label="Breadcrumb" class="max-w-5xl mx-auto px-4 sm:px-6 pt-4">
-  <ol class="flex flex-wrap items-center gap-1.5 text-sm text-text-light">
-    <li>
-      <a href="/" class="hover:text-primary transition-colors">Home</a>
-    </li>
+<nav aria-label="Breadcrumb" class="max-w-3xl mx-auto px-5 pt-4">
+  <ol class="flex items-center gap-1 text-xs text-text-light">
+    <li><a href="/" class="hover:text-text transition-colors">Home</a></li>
     {items.map((item, i) => (
-      <li class="flex items-center gap-1.5">
-        <span class="text-border">/</span>
+      <li class="flex items-center gap-1">
+        <span>/</span>
         {i === items.length - 1 ? (
-          <span class="text-text font-medium" aria-current="page">{item.label}</span>
+          <span class="text-text" aria-current="page">{item.label}</span>
         ) : (
-          <a href={item.href} class="hover:text-primary transition-colors">{item.label}</a>
+          <a href={item.href} class="hover:text-text transition-colors">{item.label}</a>
         )}
       </li>
     ))}

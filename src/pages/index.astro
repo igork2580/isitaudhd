@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import QuizCard from '../components/QuizCard.astro';
 ---
 
 <BaseLayout
@@ -8,180 +7,152 @@ import QuizCard from '../components/QuizCard.astro';
   description="Free AuDHD quizzes to explore if you have both autism and ADHD. Understand the overlap, take self-assessments, and learn what AuDHD means for you."
 >
   <!-- Hero -->
-  <section class="hero-glow">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-20 sm:pt-28 pb-16 text-center">
-      <p class="section-label mb-6">
-        <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none"><path d="M8 1C4.5 1 2 3.5 3 6s3 2.5 5 5c2-2.5 4-2 5-5s-1.5-5-5-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Free self-assessment quizzes
-      </p>
-
-      <h1 class="text-[2.75rem] sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08]">
-        Is it autism, ADHD,<br />
-        <span class="gradient-text">or both?</span>
-      </h1>
-
-      <p class="mt-6 text-lg sm:text-xl text-text-light max-w-xl mx-auto leading-relaxed">
-        Explore traits of AuDHD with free, research-informed quizzes.
-        No sign-up, no data collection, instant results.
-      </p>
-
-      <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="/quiz/is-it-audhd/" class="btn-primary text-lg">
-          Take the AuDHD Quiz
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-        </a>
-        <a href="/learn/what-is-audhd/" class="btn-secondary text-lg">
-          What is AuDHD?
-        </a>
-      </div>
-
-      <div class="mt-6 flex items-center justify-center gap-5 text-sm text-text-light">
-        <span class="flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          5-8 minutes
-        </span>
-        <span class="w-1 h-1 rounded-full bg-border"></span>
-        <span class="flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-          Private
-        </span>
-        <span class="w-1 h-1 rounded-full bg-border"></span>
-        <span>Not a diagnosis</span>
-      </div>
+  <section class="max-w-3xl mx-auto px-5 pt-20 sm:pt-28 pb-16">
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]">
+      Is it autism, ADHD,<br />or both?
+    </h1>
+    <p class="mt-5 text-lg text-text-light max-w-lg leading-relaxed">
+      Explore traits of AuDHD with free, research-informed quizzes.
+      No account needed. Your answers stay on your device.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/quiz/is-it-audhd/" class="text-sm font-medium text-white bg-text px-5 py-2.5 rounded-md hover:bg-text/80 transition-colors">
+        Take the AuDHD Quiz
+      </a>
+      <a href="/learn/what-is-audhd/" class="text-sm font-medium text-text-light border border-border px-5 py-2.5 rounded-md hover:border-text/30 hover:text-text transition-colors">
+        What is AuDHD?
+      </a>
     </div>
   </section>
 
-  <!-- Featured quizzes -->
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-    <div class="flex items-center justify-between mb-8">
-      <div>
-        <p class="section-label mb-2">Quizzes</p>
-        <h2 class="text-2xl sm:text-3xl font-bold text-text">Choose your quiz</h2>
-      </div>
-      <a href="/quiz/" class="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-dark transition-colors">
-        View all
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-      </a>
+  <!-- Quizzes -->
+  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="text-sm font-medium text-text-light uppercase tracking-wide">Quizzes</h2>
+      <a href="/quiz/" class="text-sm text-text-light hover:text-text transition-colors">View all &rarr;</a>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <QuizCard
-        title="Is It AuDHD?"
-        description="Explore whether you show traits of both autism and ADHD. Our most comprehensive assessment."
-        href="/quiz/is-it-audhd/"
-        estimatedTime="5-8 min"
-        questionCount={30}
-        color="primary"
-        featured={true}
-      />
-      <QuizCard
-        title="Autism, ADHD, or Both?"
-        description="Compare autism-typical and ADHD-typical patterns to see where your experience fits."
-        href="/quiz/autism-or-adhd/"
-        estimatedTime="4-6 min"
-        questionCount={20}
-        color="accent"
-      />
-      <QuizCard
-        title="AuDHD Burnout Check"
-        description="Check for masking fatigue, executive shutdown, and the kind of burnout sleep can't fix."
-        href="/quiz/audhd-burnout/"
-        estimatedTime="3-5 min"
-        questionCount={15}
-        color="secondary"
-      />
-    </div>
-
-    <div class="mt-5 sm:hidden text-center">
-      <a href="/quiz/" class="text-sm font-medium text-primary">View all 8 quizzes &rarr;</a>
+    <div class="space-y-1">
+      {[
+        { title: 'Is It AuDHD?', desc: 'Explore traits of both autism and ADHD', time: '5-8 min', count: 30, href: '/quiz/is-it-audhd/' },
+        { title: 'Autism, ADHD, or Both?', desc: 'See where your traits lean', time: '4-6 min', count: 20, href: '/quiz/autism-or-adhd/' },
+        { title: 'AuDHD Burnout Check', desc: 'Check for masking fatigue and executive shutdown', time: '3-5 min', count: 15, href: '/quiz/audhd-burnout/' },
+        { title: 'Sensory Profile', desc: 'Map your sensory patterns', time: '4-5 min', count: 20, href: '/quiz/sensory-profile/' },
+        { title: 'Masking Score', desc: 'How much are you masking?', time: '4-5 min', count: 20, href: '/quiz/masking-score/' },
+        { title: 'Executive Function', desc: 'Check your task initiation and flexibility', time: '4-5 min', count: 18, href: '/quiz/executive-function/' },
+        { title: 'Rejection Sensitivity', desc: 'Explore your rejection sensitivity patterns', time: '3-4 min', count: 15, href: '/quiz/rejection-sensitivity/' },
+        { title: 'AuDHD at Work', desc: 'How is your brain handling the workplace?', time: '4-5 min', count: 18, href: '/quiz/audhd-at-work/' },
+      ].map((quiz) => (
+        <a href={quiz.href} class="flex items-center justify-between py-3 px-3 -mx-3 rounded-lg hover:bg-muted transition-colors group">
+          <div class="min-w-0">
+            <p class="text-sm font-medium text-text group-hover:text-primary transition-colors">{quiz.title}</p>
+            <p class="text-xs text-text-light mt-0.5">{quiz.desc}</p>
+          </div>
+          <div class="flex items-center gap-3 text-xs text-text-light flex-shrink-0 ml-4">
+            <span class="hidden sm:inline">{quiz.count}q</span>
+            <span>{quiz.time}</span>
+            <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+          </div>
+        </a>
+      ))}
     </div>
   </section>
 
   <!-- What is AuDHD -->
-  <section class="bg-muted/60">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-10 items-center">
-        <div>
-          <p class="section-label mb-3">Understanding</p>
-          <h2 class="text-2xl sm:text-3xl font-bold text-text leading-snug">
-            What is AuDHD?
-          </h2>
-          <p class="mt-4 text-text-light leading-relaxed">
-            AuDHD is a community term for having both autism and ADHD. Research shows
-            30-50% of autistic people also meet criteria for ADHD, creating a unique
-            experience different from either alone.
-          </p>
-          <a href="/learn/what-is-audhd/" class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:text-primary-dark transition-colors">
-            Learn more
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="space-y-3">
-          {[
-            { text: 'Craving routine but getting bored by it', left: 'Autism', right: 'ADHD' },
-            { text: 'Deep focus you can\'t control where it goes', left: 'Autism', right: 'ADHD' },
-            { text: 'Wanting connection but finding it draining', left: 'Autism', right: 'ADHD' },
-          ].map((item) => (
-            <div class="card p-4">
-              <p class="text-sm font-medium text-text">{item.text}</p>
-              <div class="flex gap-2 mt-2">
-                <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary">{item.left}</span>
-                <span class="text-[11px] text-text-light">+</span>
-                <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-secondary/10 text-secondary">{item.right}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
+    <h2 class="text-sm font-medium text-text-light uppercase tracking-wide mb-6">About AuDHD</h2>
 
-  <!-- Trust signals -->
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <div class="card p-6 text-center">
-        <div class="icon-box bg-primary/10 text-primary mx-auto mb-4">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-        </div>
-        <h3 class="font-semibold text-text">Research-Informed</h3>
-        <p class="text-sm text-text-light mt-1.5 leading-relaxed">Quizzes grounded in current neurodivergence research and validated screening approaches</p>
-      </div>
-      <div class="card p-6 text-center">
-        <div class="icon-box bg-accent/10 text-accent-dark mx-auto mb-4">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        </div>
-        <h3 class="font-semibold text-text">Private & Free</h3>
-        <p class="text-sm text-text-light mt-1.5 leading-relaxed">No sign-up. Your answers stay on your device. Nothing is sent to any server.</p>
-      </div>
-      <div class="card p-6 text-center">
-        <div class="icon-box bg-secondary/10 text-secondary mx-auto mb-4">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        </div>
-        <h3 class="font-semibold text-text">Built for ND Brains</h3>
-        <p class="text-sm text-text-light mt-1.5 leading-relaxed">Sensory-friendly design. No flashing, no clutter, dark mode included.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter CTA -->
-  <section class="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
-    <div class="card p-8 sm:p-10 text-center" style="background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 4%, var(--color-surface)), color-mix(in srgb, var(--color-accent) 4%, var(--color-surface)));">
-      <p class="section-label mb-3 justify-center">Stay updated</p>
-      <h2 class="text-xl sm:text-2xl font-bold text-text">AuDHD Insights Newsletter</h2>
-      <p class="mt-2 text-text-light text-sm max-w-md mx-auto">
-        New quizzes, research digests, and practical strategies. Written for neurodivergent brains.
+    <div class="space-y-4 text-[15px] text-text-light leading-relaxed">
+      <p>
+        <strong class="text-text font-semibold">AuDHD</strong> is a community term for having both
+        autism and ADHD. Research shows 30-50% of autistic people also meet criteria for ADHD.
+        The combination creates experiences that are different from either alone.
       </p>
-      <form class="flex flex-col sm:flex-row gap-2.5 max-w-sm mx-auto mt-6" id="hero-newsletter">
+      <p>
+        People with AuDHD often describe living with contradictions: craving routine but getting bored
+        by it. Needing deep focus but unable to control where it goes. Wanting connection but finding
+        it draining.
+      </p>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+      {[
+        { label: 'Routine vs novelty', sub: 'Autism wants structure, ADHD wants change' },
+        { label: 'Focus vs distraction', sub: 'Hyperfocus meets attention scatter' },
+        { label: 'Social need vs overload', sub: 'Connection that comes at a cost' },
+      ].map((item) => (
+        <div class="border border-border rounded-lg p-3.5">
+          <p class="text-sm font-medium text-text">{item.label}</p>
+          <p class="text-xs text-text-light mt-1">{item.sub}</p>
+        </div>
+      ))}
+    </div>
+
+    <a href="/learn/what-is-audhd/" class="inline-block mt-5 text-sm text-text-light hover:text-text transition-colors">
+      Read more about AuDHD &rarr;
+    </a>
+  </section>
+
+  <!-- Learn -->
+  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="text-sm font-medium text-text-light uppercase tracking-wide">Learn</h2>
+      <a href="/learn/" class="text-sm text-text-light hover:text-text transition-colors">View all &rarr;</a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {[
+        { title: 'Signs of AuDHD', href: '/learn/signs-of-audhd/' },
+        { title: 'AuDHD in Women', href: '/learn/audhd-in-women/' },
+        { title: 'Getting Assessed', href: '/learn/getting-assessed/' },
+        { title: 'AuDHD and Burnout', href: '/learn/audhd-and-burnout/' },
+      ].map((item) => (
+        <a href={item.href} class="flex items-center justify-between border border-border rounded-lg px-4 py-3 hover:border-text/20 transition-colors group">
+          <span class="text-sm font-medium text-text">{item.title}</span>
+          <svg class="w-4 h-4 text-text-light opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
+    <div class="bg-muted rounded-xl p-6 sm:p-8">
+      <h2 class="text-base font-semibold text-text">AuDHD Insights</h2>
+      <p class="mt-1.5 text-sm text-text-light">
+        New quizzes, research digests, and practical strategies. Weekly.
+      </p>
+      <form class="flex gap-2 mt-4 max-w-sm" id="hero-newsletter">
         <input
           type="email"
           name="email"
           placeholder="your@email.com"
           required
-          class="flex-1 px-4 py-3 rounded-[--radius-md] border border-border bg-surface text-text text-sm focus:border-primary focus:outline-none"
+          class="flex-1 px-3.5 py-2 rounded-md border border-border bg-surface text-sm text-text focus:border-text/30 focus:outline-none"
         />
-        <button type="submit" class="btn-primary text-sm !py-3 !px-6">Subscribe</button>
+        <button type="submit" class="text-sm font-medium text-white bg-text px-4 py-2 rounded-md hover:bg-text/80 transition-colors flex-shrink-0">
+          Subscribe
+        </button>
       </form>
-      <p class="text-xs text-text-light mt-3">Free. No spam. Unsubscribe anytime.</p>
+      <p class="text-xs text-text-light mt-2.5">Free. No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
+    <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 text-sm text-text-light">
+      <div>
+        <p class="font-medium text-text">Research-informed</p>
+        <p class="mt-1">Quizzes grounded in current neurodivergence research.</p>
+      </div>
+      <div>
+        <p class="font-medium text-text">Private</p>
+        <p class="mt-1">Your answers stay on your device. Nothing sent to servers.</p>
+      </div>
+      <div>
+        <p class="font-medium text-text">Sensory-friendly</p>
+        <p class="mt-1">Clean design. No flashing. Dark mode included.</p>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -190,6 +161,6 @@ import QuizCard from '../components/QuizCard.astro';
   document.getElementById('hero-newsletter')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = (e.target as HTMLFormElement).querySelector('button');
-    if (btn) { btn.textContent = 'Subscribed!'; (btn as HTMLButtonElement).disabled = true; }
+    if (btn) { btn.textContent = 'Subscribed'; (btn as HTMLButtonElement).disabled = true; }
   });
 </script>

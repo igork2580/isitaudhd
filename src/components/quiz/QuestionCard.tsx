@@ -24,13 +24,7 @@ const FREQUENCY_OPTIONS = [
   { label: 'Always', value: 4 },
 ];
 
-export function QuestionCard({
-  question,
-  selectedValue,
-  onAnswer,
-  questionNumber,
-  totalQuestions,
-}: Props) {
+export function QuestionCard({ question, selectedValue, onAnswer, questionNumber }: Props) {
   const options =
     question.type === 'scenario'
       ? question.options || []
@@ -39,14 +33,14 @@ export function QuestionCard({
         : LIKERT_OPTIONS;
 
   return (
-    <div className="card p-6 sm:p-8" style={{ boxShadow: '0 2px 12px rgb(0 0 0 / 0.04), 0 1px 3px rgb(0 0 0 / 0.02)' }}>
-      <h3 className="text-lg sm:text-xl font-medium text-[--color-text] leading-relaxed" id={`question-${question.id}`}>
+    <div>
+      <h3 className="text-base sm:text-lg font-medium text-[--color-text] leading-relaxed" id={`question-${question.id}`}>
         {question.text}
       </h3>
 
-      <fieldset className="mt-7" aria-labelledby={`question-${question.id}`}>
+      <fieldset className="mt-5" aria-labelledby={`question-${question.id}`}>
         <legend className="sr-only">{question.text}</legend>
-        <div className={question.type === 'scenario' ? 'space-y-2.5' : 'space-y-2'} role="radiogroup">
+        <div className="space-y-1.5" role="radiogroup">
           {options.map((option, index) => {
             const isSelected = selectedValue === option.value;
             return (
@@ -57,50 +51,24 @@ export function QuestionCard({
                 aria-checked={isSelected}
                 tabIndex={0}
                 onKeyDown={(e) => {
-                  if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                  const move = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1
+                    : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
+                  if (move) {
                     e.preventDefault();
-                    const next = index < options.length - 1 ? index + 1 : 0;
+                    const next = (index + move + options.length) % options.length;
                     onAnswer(options[next].value);
                     (e.currentTarget.parentElement?.children[next] as HTMLElement)?.focus();
-                  } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    const prev = index > 0 ? index - 1 : options.length - 1;
-                    onAnswer(options[prev].value);
-                    (e.currentTarget.parentElement?.children[prev] as HTMLElement)?.focus();
                   }
                 }}
                 className={`
-                  w-full text-left px-4 py-3 rounded-[--radius-md] border transition-all duration-150 cursor-pointer
-                  ${
-                    isSelected
-                      ? 'border-[--color-primary] bg-[--color-primary]/6 ring-1 ring-[--color-primary]/20'
-                      : 'border-[--color-border] hover:border-[--color-text-light]/30 hover:bg-[--color-muted]/60'
+                  w-full text-left px-3.5 py-2.5 rounded-lg text-sm transition-colors
+                  ${isSelected
+                    ? 'bg-[--color-text] text-white'
+                    : 'text-[--color-text] hover:bg-[--color-muted]'
                   }
                 `}
               >
-                {question.type === 'scenario' ? (
-                  <div className="flex items-start gap-3">
-                    <span className={`
-                      mt-0.5 w-[18px] h-[18px] rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors
-                      ${isSelected ? 'border-[--color-primary] bg-[--color-primary]' : 'border-[--color-border]'}
-                    `}>
-                      {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
-                    </span>
-                    <span className="text-[15px] leading-relaxed text-[--color-text]">{option.label}</span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-3">
-                    <span className={`
-                      w-[18px] h-[18px] rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors
-                      ${isSelected ? 'border-[--color-primary] bg-[--color-primary]' : 'border-[--color-border]'}
-                    `} aria-hidden="true">
-                      {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
-                    </span>
-                    <span className={`text-[15px] ${isSelected ? 'font-medium text-[--color-text]' : 'text-[--color-text]'}`}>
-                      {option.label}
-                    </span>
-                  </div>
-                )}
+                {option.label}
               </button>
             );
           })}
