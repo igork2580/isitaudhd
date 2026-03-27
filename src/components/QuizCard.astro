@@ -5,30 +5,61 @@ interface Props {
   href: string;
   estimatedTime: string;
   questionCount: number;
+  color?: 'primary' | 'secondary' | 'accent';
   emoji?: string;
   featured?: boolean;
 }
 
-const { title, description, href, estimatedTime, questionCount, emoji = '🧠', featured = false } = Astro.props;
+const { title, description, href, estimatedTime, questionCount, color = 'primary', featured = false } = Astro.props;
+
+const colorMap = {
+  primary: { bg: 'bg-primary/8', text: 'text-primary', border: 'border-primary/20', dot: 'bg-primary' },
+  secondary: { bg: 'bg-secondary/8', text: 'text-secondary', border: 'border-secondary/20', dot: 'bg-secondary' },
+  accent: { bg: 'bg-accent/10', text: 'text-accent-dark', border: 'border-accent/20', dot: 'bg-accent-dark' },
+};
+const c = colorMap[color];
 ---
 
 <a
   href={href}
   class:list={[
-    'block bg-surface rounded-[--radius-xl] p-6 border-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md group',
-    featured ? 'border-primary/30 hover:border-primary' : 'border-border hover:border-primary/40',
+    'card card-hover block p-6 group relative overflow-hidden',
+    featured && 'ring-1 ring-primary/20',
   ]}
 >
-  <div class="text-3xl mb-3">{emoji}</div>
-  <h3 class="text-lg font-semibold text-text group-hover:text-primary transition-colors">
+  {featured && (
+    <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary">
+      Most popular
+    </span>
+  )}
+
+  <div class:list={['icon-box mb-4', c.bg, c.text]}>
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {color === 'primary' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />}
+      {color === 'secondary' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />}
+      {color === 'accent' && <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />}
+    </svg>
+  </div>
+
+  <h3 class="text-lg font-bold text-text group-hover:text-primary transition-colors leading-snug">
     {title}
   </h3>
-  <p class="text-text-light text-sm mt-2 leading-relaxed">
+  <p class="text-text-light text-[0.9375rem] mt-2 leading-relaxed">
     {description}
   </p>
-  <div class="flex items-center gap-3 mt-4 text-xs text-text-light">
-    <span>{questionCount} questions</span>
-    <span class="w-1 h-1 rounded-full bg-border"></span>
-    <span>{estimatedTime}</span>
+
+  <div class="flex items-center justify-between mt-5 pt-4 border-t border-border">
+    <div class="flex items-center gap-3 text-xs text-text-light">
+      <span class="flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01"/></svg>
+        {questionCount}q
+      </span>
+      <span class="w-0.5 h-0.5 rounded-full bg-border"></span>
+      <span>{estimatedTime}</span>
+    </div>
+    <span class="text-xs font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-0.5">
+      Start
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </span>
   </div>
 </a>

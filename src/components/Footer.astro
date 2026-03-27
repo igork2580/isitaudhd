@@ -2,44 +2,53 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-surface border-t border-border mt-16">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <a href="/" class="flex items-center gap-2 text-lg font-bold text-primary">
-          <span class="text-xl">∞</span>
-          <span>IsItAuDHD</span>
+<footer class="border-t border-border mt-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="col-span-2 md:col-span-1">
+        <a href="/" class="flex items-center gap-2 group">
+          <span class="w-7 h-7 rounded-md bg-primary flex items-center justify-center text-white text-sm font-bold leading-none">∞</span>
+          <span class="font-bold text-text group-hover:text-primary transition-colors">IsItAuDHD</span>
         </a>
-        <p class="mt-3 text-text-light text-sm leading-relaxed">
-          Free quizzes and resources for understanding the autism + ADHD overlap. Not a diagnostic tool.
+        <p class="mt-3 text-text-light text-sm leading-relaxed max-w-[240px]">
+          Free quizzes and resources for understanding the autism + ADHD overlap.
         </p>
       </div>
 
       <div>
-        <h3 class="font-semibold text-text mb-3">Quizzes</h3>
+        <h3 class="text-xs font-semibold text-text uppercase tracking-wider mb-3">Quizzes</h3>
         <ul class="space-y-2 text-sm">
           <li><a href="/quiz/is-it-audhd/" class="text-text-light hover:text-primary transition-colors">Is It AuDHD?</a></li>
-          <li><a href="/quiz/autism-or-adhd/" class="text-text-light hover:text-primary transition-colors">Autism or ADHD or Both?</a></li>
-          <li><a href="/quiz/audhd-burnout/" class="text-text-light hover:text-primary transition-colors">AuDHD Burnout Check</a></li>
+          <li><a href="/quiz/autism-or-adhd/" class="text-text-light hover:text-primary transition-colors">Autism or ADHD?</a></li>
+          <li><a href="/quiz/audhd-burnout/" class="text-text-light hover:text-primary transition-colors">Burnout Check</a></li>
+          <li><a href="/quiz/" class="text-text-light hover:text-primary transition-colors">All quizzes</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="font-semibold text-text mb-3">Resources</h3>
+        <h3 class="text-xs font-semibold text-text uppercase tracking-wider mb-3">Learn</h3>
         <ul class="space-y-2 text-sm">
           <li><a href="/learn/what-is-audhd/" class="text-text-light hover:text-primary transition-colors">What is AuDHD?</a></li>
           <li><a href="/learn/signs-of-audhd/" class="text-text-light hover:text-primary transition-colors">Signs of AuDHD</a></li>
+          <li><a href="/learn/getting-assessed/" class="text-text-light hover:text-primary transition-colors">Getting assessed</a></li>
+          <li><a href="/blog/" class="text-text-light hover:text-primary transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold text-text uppercase tracking-wider mb-3">Site</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/about/" class="text-text-light hover:text-primary transition-colors">About</a></li>
+          <li><a href="/newsletter/" class="text-text-light hover:text-primary transition-colors">Newsletter</a></li>
           <li><a href="/disclaimer/" class="text-text-light hover:text-primary transition-colors">Disclaimer</a></li>
-          <li><a href="/privacy/" class="text-text-light hover:text-primary transition-colors">Privacy Policy</a></li>
+          <li><a href="/privacy/" class="text-text-light hover:text-primary transition-colors">Privacy</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="mt-10 pt-6 border-t border-border text-center text-sm text-text-light">
-      <p class="mb-2">
-        This site is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.
-      </p>
-      <p>&copy; {year} IsItAuDHD. All rights reserved.</p>
+    <div class="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-text-light">
+      <p>Not a diagnostic tool. Always consult a qualified professional.</p>
+      <p>&copy; {year} IsItAuDHD</p>
     </div>
   </div>
 </footer>

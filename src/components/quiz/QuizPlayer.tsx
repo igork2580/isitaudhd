@@ -133,21 +133,23 @@ export function QuizPlayer({ quiz }: Props) {
         />
       </div>
 
-      <div className="flex justify-between mt-8">
+      <div className="flex justify-between items-center mt-6">
         <button
           onClick={handlePrev}
           disabled={state.currentIndex === 0}
-          className="px-6 py-3 rounded-[--radius-lg] font-medium text-[--color-text-light] hover:text-[--color-text] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-1.5 px-4 py-2.5 rounded-[--radius-md] text-sm font-medium text-[--color-text-light] hover:text-[--color-text] hover:bg-[--color-muted] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/></svg>
           Back
         </button>
 
         <button
           onClick={handleNext}
           disabled={!hasCurrentAnswer}
-          className="px-8 py-3 rounded-[--radius-lg] font-semibold bg-[--color-primary] text-white hover:bg-[--color-primary-dark] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="btn-primary !text-sm disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
         >
-          {isLastQuestion ? 'See Results' : 'Next'}
+          {isLastQuestion ? 'See Results' : 'Continue'}
+          <svg className="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
         </button>
       </div>
     </div>

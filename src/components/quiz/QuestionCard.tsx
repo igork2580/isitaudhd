@@ -39,17 +39,14 @@ export function QuestionCard({
         : LIKERT_OPTIONS;
 
   return (
-    <div className="bg-[--color-surface] rounded-[--radius-xl] p-6 sm:p-8 shadow-sm border border-[--color-border]">
-      <p className="text-xs font-medium text-[--color-text-light] uppercase tracking-wide mb-3">
-        Question {questionNumber} of {totalQuestions}
-      </p>
-      <h3 className="text-lg sm:text-xl font-medium text-[--color-text] leading-relaxed mb-8" id={`question-${question.id}`}>
+    <div className="card p-6 sm:p-8" style={{ boxShadow: '0 2px 12px rgb(0 0 0 / 0.04), 0 1px 3px rgb(0 0 0 / 0.02)' }}>
+      <h3 className="text-lg sm:text-xl font-medium text-[--color-text] leading-relaxed" id={`question-${question.id}`}>
         {question.text}
       </h3>
 
-      <fieldset aria-labelledby={`question-${question.id}`}>
+      <fieldset className="mt-7" aria-labelledby={`question-${question.id}`}>
         <legend className="sr-only">{question.text}</legend>
-        <div className={question.type === 'scenario' ? 'space-y-3' : 'space-y-2.5'} role="radiogroup">
+        <div className={question.type === 'scenario' ? 'space-y-2.5' : 'space-y-2'} role="radiogroup">
           {options.map((option, index) => {
             const isSelected = selectedValue === option.value;
             return (
@@ -73,30 +70,35 @@ export function QuestionCard({
                   }
                 }}
                 className={`
-                  w-full text-left px-5 py-3.5 rounded-[--radius-lg] border-2 transition-all duration-150
+                  w-full text-left px-4 py-3 rounded-[--radius-md] border transition-all duration-150 cursor-pointer
                   ${
                     isSelected
-                      ? 'border-[--color-primary] bg-[--color-primary]/8 text-[--color-primary-dark] font-medium'
-                      : 'border-[--color-border] hover:border-[--color-primary]/40 text-[--color-text]'
+                      ? 'border-[--color-primary] bg-[--color-primary]/6 ring-1 ring-[--color-primary]/20'
+                      : 'border-[--color-border] hover:border-[--color-text-light]/30 hover:bg-[--color-muted]/60'
                   }
                 `}
               >
                 {question.type === 'scenario' ? (
-                  <span className="text-[15px] leading-relaxed">{option.label}</span>
+                  <div className="flex items-start gap-3">
+                    <span className={`
+                      mt-0.5 w-[18px] h-[18px] rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors
+                      ${isSelected ? 'border-[--color-primary] bg-[--color-primary]' : 'border-[--color-border]'}
+                    `}>
+                      {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                    </span>
+                    <span className="text-[15px] leading-relaxed text-[--color-text]">{option.label}</span>
+                  </div>
                 ) : (
                   <div className="flex items-center gap-3">
-                    <span
-                      className={`
-                        w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center
-                        ${isSelected ? 'border-[--color-primary] bg-[--color-primary]' : 'border-[--color-border]'}
-                      `}
-                      aria-hidden="true"
-                    >
-                      {isSelected && (
-                        <span className="w-2 h-2 rounded-full bg-white" />
-                      )}
+                    <span className={`
+                      w-[18px] h-[18px] rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors
+                      ${isSelected ? 'border-[--color-primary] bg-[--color-primary]' : 'border-[--color-border]'}
+                    `} aria-hidden="true">
+                      {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
                     </span>
-                    <span className="text-[15px]">{option.label}</span>
+                    <span className={`text-[15px] ${isSelected ? 'font-medium text-[--color-text]' : 'text-[--color-text]'}`}>
+                      {option.label}
+                    </span>
                   </div>
                 )}
               </button>
