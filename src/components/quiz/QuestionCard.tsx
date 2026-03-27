@@ -33,14 +33,17 @@ export function QuestionCard({ question, selectedValue, onAnswer, questionNumber
         : LIKERT_OPTIONS;
 
   return (
-    <div>
-      <h3 className="text-base sm:text-lg font-medium text-[--color-text] leading-relaxed" id={`question-${question.id}`}>
+    <div className="bg-[--color-surface] rounded-xl border border-[--color-border] p-5 sm:p-6">
+      <h3
+        className="text-[0.9375rem] sm:text-base font-medium text-[--color-text] leading-relaxed"
+        id={`question-${question.id}`}
+      >
         {question.text}
       </h3>
 
       <fieldset className="mt-5" aria-labelledby={`question-${question.id}`}>
         <legend className="sr-only">{question.text}</legend>
-        <div className="space-y-1.5" role="radiogroup">
+        <div className="space-y-2" role="radiogroup">
           {options.map((option, index) => {
             const isSelected = selectedValue === option.value;
             return (
@@ -61,14 +64,22 @@ export function QuestionCard({ question, selectedValue, onAnswer, questionNumber
                   }
                 }}
                 className={`
-                  w-full text-left px-3.5 py-2.5 rounded-lg text-sm transition-colors
+                  w-full text-left px-3.5 py-2.5 rounded-lg text-[0.8125rem] border transition-all
                   ${isSelected
-                    ? 'bg-[--color-btn] text-[--color-btn-text]'
-                    : 'text-[--color-text] hover:bg-[--color-muted]'
+                    ? 'border-[--color-primary] bg-[--color-primary-soft] text-[--color-text] font-medium'
+                    : 'border-[--color-border] text-[--color-text] hover:border-[--color-text-light]/40 hover:bg-[--color-muted]/50'
                   }
                 `}
               >
-                {option.label}
+                <span className="flex items-center gap-2.5">
+                  <span className={`
+                    w-4 h-4 rounded-full border-[1.5px] flex-shrink-0 flex items-center justify-center transition-all
+                    ${isSelected ? 'border-[--color-primary] bg-[--color-primary]' : 'border-[--color-border]'}
+                  `}>
+                    {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                  </span>
+                  {option.label}
+                </span>
               </button>
             );
           })}

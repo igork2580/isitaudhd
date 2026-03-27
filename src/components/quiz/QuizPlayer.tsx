@@ -133,11 +133,11 @@ export function QuizPlayer({ quiz }: Props) {
         />
       </div>
 
-      <div className="flex justify-between items-center mt-8 pt-6 border-t border-[--color-border]">
+      <div className="flex justify-between items-center mt-6">
         <button
           onClick={handlePrev}
           disabled={state.currentIndex === 0}
-          className="text-sm text-[--color-text-light] hover:text-[--color-text] disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
+          className="text-xs text-[--color-text-light] hover:text-[--color-text] disabled:opacity-20 disabled:cursor-not-allowed transition-colors"
         >
           &larr; Back
         </button>
@@ -145,7 +145,7 @@ export function QuizPlayer({ quiz }: Props) {
         <button
           onClick={handleNext}
           disabled={!hasCurrentAnswer}
-          className="text-sm font-medium text-[--color-btn-text] bg-[--color-btn] px-5 py-2 rounded-md hover:bg-[--color-btn]/80 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+          className="text-sm font-medium text-[--color-btn-text] bg-[--color-btn] px-5 py-2.5 rounded-lg hover:opacity-90 disabled:opacity-30 disabled:cursor-not-allowed transition-opacity"
         >
           {isLastQuestion ? 'See Results' : 'Continue'} &rarr;
         </button>

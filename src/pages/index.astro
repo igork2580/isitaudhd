@@ -7,152 +7,149 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Free AuDHD quizzes to explore if you have both autism and ADHD. Understand the overlap, take self-assessments, and learn what AuDHD means for you."
 >
   <!-- Hero -->
-  <section class="max-w-3xl mx-auto px-5 pt-20 sm:pt-28 pb-16">
-    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]">
-      Is it autism, ADHD,<br />or both?
+  <section class="max-w-2xl mx-auto px-5 pt-16 sm:pt-24 pb-14">
+    <h1 class="text-3xl sm:text-[2.75rem] font-bold tracking-tight leading-[1.15]">
+      Is it autism, ADHD, or both?
     </h1>
-    <p class="mt-5 text-lg text-text-light max-w-lg leading-relaxed">
+    <p class="mt-4 text-base text-text-light leading-relaxed max-w-lg">
       Explore traits of AuDHD with free, research-informed quizzes.
-      No account needed. Your answers stay on your device.
+      No account needed. Your answers never leave your device.
     </p>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a href="/quiz/is-it-audhd/" class="text-sm font-medium text-btn-text bg-btn px-5 py-2.5 rounded-md hover:bg-btn/80 transition-colors">
-        Take the AuDHD Quiz
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a href="/quiz/is-it-audhd/" class="text-sm font-medium text-btn-text bg-btn px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity">
+        Take the AuDHD Quiz &rarr;
       </a>
-      <a href="/learn/what-is-audhd/" class="text-sm font-medium text-text-light border border-border px-5 py-2.5 rounded-md hover:border-text/30 hover:text-text transition-colors">
+      <a href="/learn/what-is-audhd/" class="text-sm font-medium text-text border border-border px-5 py-2.5 rounded-lg hover:bg-muted transition-colors">
         What is AuDHD?
       </a>
     </div>
   </section>
 
   <!-- Quizzes -->
-  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
-    <div class="flex items-baseline justify-between mb-6">
-      <h2 class="text-sm font-medium text-text-light uppercase tracking-wide">Quizzes</h2>
-      <a href="/quiz/" class="text-sm text-text-light hover:text-text transition-colors">View all &rarr;</a>
+  <section class="max-w-2xl mx-auto px-5 pb-14">
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="text-xs font-semibold text-text-light uppercase tracking-wider">Quizzes</h2>
+      <a href="/quiz/" class="text-xs text-text-light hover:text-text transition-colors">All quizzes &rarr;</a>
     </div>
 
-    <div class="space-y-1">
+    <div class="bg-surface rounded-xl border border-border overflow-hidden divide-y divide-border">
       {[
-        { title: 'Is It AuDHD?', desc: 'Explore traits of both autism and ADHD', time: '5-8 min', count: 30, href: '/quiz/is-it-audhd/' },
+        { title: 'Is It AuDHD?', desc: 'Explore traits of both autism and ADHD', time: '5-8 min', count: 30, href: '/quiz/is-it-audhd/', badge: true },
         { title: 'Autism, ADHD, or Both?', desc: 'See where your traits lean', time: '4-6 min', count: 20, href: '/quiz/autism-or-adhd/' },
-        { title: 'AuDHD Burnout Check', desc: 'Check for masking fatigue and executive shutdown', time: '3-5 min', count: 15, href: '/quiz/audhd-burnout/' },
+        { title: 'AuDHD Burnout Check', desc: 'Masking fatigue and executive shutdown', time: '3-5 min', count: 15, href: '/quiz/audhd-burnout/' },
         { title: 'Sensory Profile', desc: 'Map your sensory patterns', time: '4-5 min', count: 20, href: '/quiz/sensory-profile/' },
         { title: 'Masking Score', desc: 'How much are you masking?', time: '4-5 min', count: 20, href: '/quiz/masking-score/' },
-        { title: 'Executive Function', desc: 'Check your task initiation and flexibility', time: '4-5 min', count: 18, href: '/quiz/executive-function/' },
-        { title: 'Rejection Sensitivity', desc: 'Explore your rejection sensitivity patterns', time: '3-4 min', count: 15, href: '/quiz/rejection-sensitivity/' },
-        { title: 'AuDHD at Work', desc: 'How is your brain handling the workplace?', time: '4-5 min', count: 18, href: '/quiz/audhd-at-work/' },
+        { title: 'Executive Function', desc: 'Task initiation and flexibility', time: '4-5 min', count: 18, href: '/quiz/executive-function/' },
+        { title: 'Rejection Sensitivity', desc: 'Your rejection sensitivity patterns', time: '3-4 min', count: 15, href: '/quiz/rejection-sensitivity/' },
+        { title: 'AuDHD at Work', desc: 'How your brain handles the workplace', time: '4-5 min', count: 18, href: '/quiz/audhd-at-work/' },
       ].map((quiz) => (
-        <a href={quiz.href} class="flex items-center justify-between py-3 px-3 -mx-3 rounded-lg hover:bg-muted transition-colors group">
+        <a href={quiz.href} class="flex items-center justify-between px-4 py-3.5 hover:bg-muted/60 transition-colors group">
           <div class="min-w-0">
-            <p class="text-sm font-medium text-text group-hover:text-primary transition-colors">{quiz.title}</p>
+            <div class="flex items-center gap-2">
+              <span class="text-[0.8125rem] font-medium text-text group-hover:text-primary transition-colors">{quiz.title}</span>
+              {quiz.badge && <span class="text-[10px] font-medium text-primary bg-primary-soft px-1.5 py-0.5 rounded">Popular</span>}
+            </div>
             <p class="text-xs text-text-light mt-0.5">{quiz.desc}</p>
           </div>
-          <div class="flex items-center gap-3 text-xs text-text-light flex-shrink-0 ml-4">
-            <span class="hidden sm:inline">{quiz.count}q</span>
+          <div class="flex items-center gap-3 text-[11px] text-text-light flex-shrink-0 ml-4 tabular-nums">
+            <span>{quiz.count}q</span>
+            <span class="w-px h-3 bg-border"></span>
             <span>{quiz.time}</span>
-            <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
           </div>
         </a>
       ))}
     </div>
   </section>
 
-  <!-- What is AuDHD -->
-  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
-    <h2 class="text-sm font-medium text-text-light uppercase tracking-wide mb-6">About AuDHD</h2>
+  <!-- About AuDHD -->
+  <section class="max-w-2xl mx-auto px-5 pb-14">
+    <h2 class="text-xs font-semibold text-text-light uppercase tracking-wider mb-4">About AuDHD</h2>
 
-    <div class="space-y-4 text-[15px] text-text-light leading-relaxed">
-      <p>
-        <strong class="text-text font-semibold">AuDHD</strong> is a community term for having both
-        autism and ADHD. Research shows 30-50% of autistic people also meet criteria for ADHD.
-        The combination creates experiences that are different from either alone.
-      </p>
-      <p>
-        People with AuDHD often describe living with contradictions: craving routine but getting bored
-        by it. Needing deep focus but unable to control where it goes. Wanting connection but finding
-        it draining.
-      </p>
+    <div class="bg-surface rounded-xl border border-border p-5 sm:p-6">
+      <div class="text-[0.9375rem] text-text-light leading-relaxed space-y-3">
+        <p>
+          <strong class="text-text">AuDHD</strong> is a community term for having both autism and ADHD.
+          Research shows 30-50% of autistic people also meet criteria for ADHD. The combination creates
+          a unique experience.
+        </p>
+        <p>
+          People with AuDHD describe living with contradictions: craving routine but getting bored by it.
+          Deep focus you can't control. Wanting connection but finding it draining.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-5">
+        {[
+          { top: 'Routine vs novelty', bot: 'Structure meets restlessness' },
+          { top: 'Focus vs distraction', bot: 'Hyperfocus meets attention scatter' },
+          { top: 'Social need vs overload', bot: 'Connection at a cost' },
+        ].map((item) => (
+          <div class="bg-muted rounded-lg px-3.5 py-3">
+            <p class="text-xs font-medium text-text">{item.top}</p>
+            <p class="text-[11px] text-text-light mt-0.5">{item.bot}</p>
+          </div>
+        ))}
+      </div>
+
+      <a href="/learn/what-is-audhd/" class="inline-block mt-4 text-xs font-medium text-primary hover:text-primary-dark transition-colors">
+        Learn more about AuDHD &rarr;
+      </a>
     </div>
-
-    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
-      {[
-        { label: 'Routine vs novelty', sub: 'Autism wants structure, ADHD wants change' },
-        { label: 'Focus vs distraction', sub: 'Hyperfocus meets attention scatter' },
-        { label: 'Social need vs overload', sub: 'Connection that comes at a cost' },
-      ].map((item) => (
-        <div class="border border-border rounded-lg p-3.5">
-          <p class="text-sm font-medium text-text">{item.label}</p>
-          <p class="text-xs text-text-light mt-1">{item.sub}</p>
-        </div>
-      ))}
-    </div>
-
-    <a href="/learn/what-is-audhd/" class="inline-block mt-5 text-sm text-text-light hover:text-text transition-colors">
-      Read more about AuDHD &rarr;
-    </a>
   </section>
 
   <!-- Learn -->
-  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
-    <div class="flex items-baseline justify-between mb-6">
-      <h2 class="text-sm font-medium text-text-light uppercase tracking-wide">Learn</h2>
-      <a href="/learn/" class="text-sm text-text-light hover:text-text transition-colors">View all &rarr;</a>
+  <section class="max-w-2xl mx-auto px-5 pb-14">
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="text-xs font-semibold text-text-light uppercase tracking-wider">Learn</h2>
+      <a href="/learn/" class="text-xs text-text-light hover:text-text transition-colors">All articles &rarr;</a>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
       {[
         { title: 'Signs of AuDHD', href: '/learn/signs-of-audhd/' },
         { title: 'AuDHD in Women', href: '/learn/audhd-in-women/' },
         { title: 'Getting Assessed', href: '/learn/getting-assessed/' },
         { title: 'AuDHD and Burnout', href: '/learn/audhd-and-burnout/' },
       ].map((item) => (
-        <a href={item.href} class="flex items-center justify-between border border-border rounded-lg px-4 py-3 hover:border-text/20 transition-colors group">
-          <span class="text-sm font-medium text-text">{item.title}</span>
-          <svg class="w-4 h-4 text-text-light opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+        <a href={item.href} class="flex items-center justify-between bg-surface border border-border rounded-lg px-4 py-3 hover:bg-muted/60 transition-colors group">
+          <span class="text-[0.8125rem] font-medium text-text group-hover:text-primary transition-colors">{item.title}</span>
+          <svg class="w-3.5 h-3.5 text-text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
         </a>
       ))}
     </div>
   </section>
 
   <!-- Newsletter -->
-  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
-    <div class="bg-muted rounded-xl p-6 sm:p-8">
-      <h2 class="text-base font-semibold text-text">AuDHD Insights</h2>
-      <p class="mt-1.5 text-sm text-text-light">
+  <section class="max-w-2xl mx-auto px-5 pb-14">
+    <div class="bg-surface rounded-xl border border-border p-5 sm:p-6">
+      <h2 class="text-sm font-semibold text-text">AuDHD Insights</h2>
+      <p class="mt-1 text-xs text-text-light">
         New quizzes, research digests, and practical strategies. Weekly.
       </p>
-      <form class="flex gap-2 mt-4 max-w-sm" id="hero-newsletter">
-        <input
-          type="email"
-          name="email"
-          placeholder="your@email.com"
-          required
-          class="flex-1 px-3.5 py-2 rounded-md border border-border bg-surface text-sm text-text focus:border-text/30 focus:outline-none"
-        />
-        <button type="submit" class="text-sm font-medium text-btn-text bg-btn px-4 py-2 rounded-md hover:bg-btn/80 transition-colors flex-shrink-0">
+      <form class="flex gap-2 mt-3.5 max-w-sm" id="hero-newsletter">
+        <input type="email" name="email" placeholder="your@email.com" required
+          class="flex-1 px-3 py-2 rounded-lg border border-border bg-background text-sm text-text focus:border-primary focus:outline-none transition-colors" />
+        <button type="submit" class="text-sm font-medium text-btn-text bg-btn px-4 py-2 rounded-lg hover:opacity-90 transition-opacity flex-shrink-0">
           Subscribe
         </button>
       </form>
-      <p class="text-xs text-text-light mt-2.5">Free. No spam. Unsubscribe anytime.</p>
+      <p class="text-[11px] text-text-light mt-2">Free. No spam. Unsubscribe anytime.</p>
     </div>
   </section>
 
   <!-- Trust -->
-  <section class="max-w-3xl mx-auto px-5 py-12 border-t border-border">
-    <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 text-sm text-text-light">
-      <div>
-        <p class="font-medium text-text">Research-informed</p>
-        <p class="mt-1">Quizzes grounded in current neurodivergence research.</p>
-      </div>
-      <div>
-        <p class="font-medium text-text">Private</p>
-        <p class="mt-1">Your answers stay on your device. Nothing sent to servers.</p>
-      </div>
-      <div>
-        <p class="font-medium text-text">Sensory-friendly</p>
-        <p class="mt-1">Clean design. No flashing. Dark mode included.</p>
-      </div>
+  <section class="max-w-2xl mx-auto px-5 pb-16">
+    <div class="grid grid-cols-3 gap-4 text-center">
+      {[
+        { title: 'Research-informed', desc: 'Based on current neurodivergence research' },
+        { title: 'Private', desc: 'Your answers never leave your device' },
+        { title: 'Sensory-friendly', desc: 'Clean design with dark mode' },
+      ].map((item) => (
+        <div>
+          <p class="text-xs font-medium text-text">{item.title}</p>
+          <p class="text-[11px] text-text-light mt-0.5 leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
     </div>
   </section>
 </BaseLayout>
