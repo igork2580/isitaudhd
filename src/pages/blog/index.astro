@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    title: 'Late Diagnosis AuDHD: Grief, Relief, and Figuring Out Who You Actually Are',
+    excerpt: 'Getting diagnosed with AuDHD as an adult rewrites your entire personal history. Here\'s what that process actually looks like, and what comes after.',
+    href: '/blog/late-diagnosis-audhd/',
+    date: '2026-03-27',
+    readingTime: '9 min read',
+  },
+  {
+    title: 'AuDHD and Dating: Why Relationships Feel Like a Second Job',
+    excerpt: 'Sensory needs, rejection sensitivity, communication misfires. Dating with AuDHD means juggling invisible challenges that most partners never see.',
+    href: '/blog/audhd-and-dating/',
+    date: '2026-03-27',
+    readingTime: '8 min read',
+  },
+  {
+    title: 'AuDHD Morning Routines That Actually Survive the Week',
+    excerpt: 'Your autistic brain wants a perfect routine. Your ADHD brain torches it by Wednesday. Here\'s how to build mornings that work with both.',
+    href: '/blog/audhd-morning-routine/',
+    date: '2026-03-27',
+    readingTime: '7 min read',
+  },
+  {
+    title: 'AuDHD and Medication: What Changes When You Treat Both Conditions',
+    excerpt: 'Stimulants, SSRIs, and the tricky overlap of treating ADHD when autism is in the mix. What to ask your prescriber and what to watch for.',
+    href: '/blog/audhd-and-medication/',
+    date: '2026-03-27',
+    readingTime: '9 min read',
+  },
+  {
+    title: 'AuDHD and Parenting: Loving Your Kids While Running on Empty',
+    excerpt: 'Sensory overload from your own children, executive function demands that never stop, and the guilt of needing alone time. You\'re not failing.',
+    href: '/blog/audhd-and-parenting/',
+    date: '2026-03-27',
+    readingTime: '8 min read',
+  },
+];
+---
+
+<BaseLayout
+  title="AuDHD Blog"
+  description="Articles about living with AuDHD (autism + ADHD): dating, morning routines, medication, parenting, late diagnosis, and practical strategies that actually work."
+>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <header class="mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">AuDHD Blog</h1>
+      <p class="mt-4 text-lg text-text-light leading-relaxed">
+        Real talk about living with both autism and ADHD. Practical strategies, personal experiences, and the stuff nobody warns you about.
+      </p>
+    </header>
+
+    <div class="space-y-4">
+      {posts.map((post) => (
+        <a
+          href={post.href}
+          class="block p-6 rounded-[--radius-xl] border border-border hover:border-primary/40 hover:bg-accent/5 transition-all group"
+        >
+          <div class="flex items-center gap-3 text-sm text-text-light mb-2">
+            <time datetime={post.date}>
+              {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <span class="w-1 h-1 rounded-full bg-border"></span>
+            <span>{post.readingTime}</span>
+          </div>
+          <h2 class="text-xl font-bold text-text group-hover:text-primary transition-colors">
+            {post.title}
+          </h2>
+          <p class="mt-2 text-text-light leading-relaxed">
+            {post.excerpt}
+          </p>
+          <span class="inline-block mt-3 text-primary text-sm font-medium">
+            Read article &rarr;
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 bg-accent/10 rounded-[--radius-xl] p-6 sm:p-8">
+      <h3 class="font-semibold text-text mb-3">Want to explore your own traits?</h3>
+      <p class="text-text-light leading-relaxed mb-4">
+        Our quizzes help you see whether AuDHD patterns show up in your daily life.
+      </p>
+      <ul class="space-y-2">
+        <li><a href="/quiz/is-it-audhd/" class="text-primary hover:text-primary-dark transition-colors">Take the AuDHD Quiz &rarr;</a></li>
+        <li><a href="/learn/" class="text-primary hover:text-primary-dark transition-colors">Learn about AuDHD &rarr;</a></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

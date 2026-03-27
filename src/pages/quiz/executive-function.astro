@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { QuizPlayer } from '../../components/quiz/QuizPlayer';
+import quizData from '../../content/quizzes/executive-function.json';
+---
+
+<BaseLayout
+  title="AuDHD Executive Function Check — Free Quiz"
+  description="Executive function with AuDHD means wanting perfect plans but never executing them. This free quiz checks your task initiation, working memory, and flexibility."
+  breadcrumbs={[{ label: 'Quizzes', href: '/quiz/' }, { label: 'Executive Function', href: '/quiz/executive-function/' }]}
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <header class="text-center mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">
+        AuDHD <span class="text-primary">Executive Function</span> Check
+      </h1>
+      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
+        Executive function is where autism and ADHD collide hardest. You want to plan everything perfectly (autism) but can't make yourself start (ADHD). This quiz checks how your executive function is holding up.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
+        <span>🕐 {quizData.estimatedTime}</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>📝 {quizData.questions.length} questions</span>
+      </div>
+    </header>
+    <QuizPlayer quiz={quizData} client:load />
+  </article>
+</BaseLayout>

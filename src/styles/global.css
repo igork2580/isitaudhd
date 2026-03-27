@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+/* Self-hosted DM Sans */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/dm-sans-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/dm-sans-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/dm-sans-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/dm-sans-700.woff2') format('woff2');
+}
+
 @theme {
   --color-primary: #5B9A8B;
   --color-primary-light: #7BB5A8;
@@ -14,10 +44,8 @@
   --color-warning: #E8C547;
   --color-surface: #FFFFFF;
   --color-background: #FDF8F4;
-  --color-background-dark: #1A1A2E;
   --color-text: #2D2D2D;
   --color-text-light: #6B6B6B;
-  --color-text-dark-mode: #E8E0D8;
   --color-border: #E8E0D8;
 
   --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
@@ -41,13 +69,43 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .dark body {
-    background-color: var(--color-background-dark);
-    color: var(--color-text-dark-mode);
+  /* Dark mode overrides */
+  html.dark {
+    --color-surface: #1E1E2E;
+    --color-background: #141420;
+    --color-text: #E8E0D8;
+    --color-text-light: #A0A0A0;
+    --color-border: #2E2E3E;
+    --color-primary: #7BB5A8;
+    --color-primary-light: #9ACFC4;
+    --color-primary-dark: #5B9A8B;
+    --color-secondary: #F0A08D;
+    --color-secondary-light: #F5B8A8;
+    --color-secondary-dark: #E8846B;
+    --color-accent: #CCC2E3;
+    --color-accent-light: #DDD5EE;
+    --color-accent-dark: #B4A7D6;
   }
 
   ::selection {
     background-color: var(--color-accent);
     color: white;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Focus styles for keyboard nav */
+  *:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }

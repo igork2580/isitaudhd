@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { QuizPlayer } from '../../components/quiz/QuizPlayer';
+import quizData from '../../content/quizzes/masking-score.json';
+---
+
+<BaseLayout
+  title="How Much Are You Masking? — Free AuDHD Quiz"
+  description="Masking is exhausting. This free 20-question quiz explores how much you're hiding your neurodivergent traits and the toll it takes. Takes 4-5 minutes."
+  breadcrumbs={[{ label: 'Quizzes', href: '/quiz/' }, { label: 'Masking Score', href: '/quiz/masking-score/' }]}
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <header class="text-center mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">
+        How Much Are You <span class="text-secondary">Masking?</span>
+      </h1>
+      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
+        Masking means hiding or suppressing your natural neurodivergent traits to fit in. Most people with AuDHD do it without realizing how much energy it costs. This quiz helps you see the full picture.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
+        <span>🕐 {quizData.estimatedTime}</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>📝 {quizData.questions.length} questions</span>
+      </div>
+    </header>
+    <QuizPlayer quiz={quizData} client:load />
+  </article>
+</BaseLayout>

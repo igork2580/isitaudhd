@@ -2,11 +2,37 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { QuizPlayer } from '../../components/quiz/QuizPlayer';
 import quizData from '../../content/quizzes/is-it-audhd.json';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "Is It AuDHD? — Free Self-Assessment Quiz",
+  "description": "A free 30-question self-assessment quiz exploring traits of both autism and ADHD (AuDHD).",
+  "educationalAlignment": { "@type": "AlignmentObject", "alignmentType": "educationalSubject", "targetName": "Neurodivergence" },
+  "about": { "@type": "MedicalCondition", "name": "AuDHD (Autism + ADHD)" },
+  "numberOfQuestions": quizData.questions.length,
+  "hasPart": quizData.questions.slice(0, 5).map((q, i) => ({
+    "@type": "Question",
+    "position": i + 1,
+    "text": q.text,
+  })),
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does this AuDHD quiz measure?", "acceptedAnswer": { "@type": "Answer", "text": "This quiz explores three areas: autism traits, ADHD traits, and overlap traits — the unique patterns that emerge when both are present." }},
+    { "@type": "Question", "name": "Is this AuDHD quiz a diagnosis?", "acceptedAnswer": { "@type": "Answer", "text": "No. This quiz is a self-exploration tool, not a clinical assessment. Only a qualified professional can provide a diagnosis." }},
+    { "@type": "Question", "name": "Who is this AuDHD quiz for?", "acceptedAnswer": { "@type": "Answer", "text": "This quiz is for adults who suspect they might have traits of both autism and ADHD, especially if diagnosed with one but suspecting the other." }},
+  ],
+};
 ---
 
 <BaseLayout
   title="Is It AuDHD? — Free Self-Assessment Quiz"
   description="Take this free 30-question quiz to explore whether you show traits of both autism and ADHD (AuDHD). Takes 5-8 minutes. Instant results."
+  schema={schema}
+  breadcrumbs={[{ label: 'Quizzes', href: '/quiz/' }, { label: 'Is It AuDHD?', href: '/quiz/is-it-audhd/' }]}
 >
   <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
     <!-- SEO intro content -->
@@ -65,5 +91,8 @@ import quizData from '../../content/quizzes/is-it-audhd.json';
         </p>
       </div>
     </section>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </article>
 </BaseLayout>

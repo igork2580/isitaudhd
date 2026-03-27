@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { QuizPlayer } from '../../components/quiz/QuizPlayer';
+import quizData from '../../content/quizzes/rejection-sensitivity.json';
+---
+
+<BaseLayout
+  title="Rejection Sensitivity in AuDHD — Free Quiz"
+  description="Rejection sensitivity in AuDHD combines autistic literal interpretation with ADHD emotional intensity. This free quiz explores your patterns. Takes 3-4 minutes."
+  breadcrumbs={[{ label: 'Quizzes', href: '/quiz/' }, { label: 'Rejection Sensitivity', href: '/quiz/rejection-sensitivity/' }]}
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <header class="text-center mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-text">
+        Rejection Sensitivity in <span class="text-secondary">AuDHD</span>
+      </h1>
+      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
+        When autism's tendency to take things literally meets ADHD's emotional dysregulation, rejection can feel devastating. This quiz explores how rejection sensitivity shows up in your life.
+      </p>
+      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
+        <span>🕐 {quizData.estimatedTime}</span>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>📝 {quizData.questions.length} questions</span>
+      </div>
+    </header>
+    <QuizPlayer quiz={quizData} client:load />
+  </article>
+</BaseLayout>

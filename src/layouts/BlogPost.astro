@@ -1,0 +1,64 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  readingTime: string;
+  author?: string;
+}
+
+const { title, description, date, readingTime, author = 'IsItAuDHD Team' } = Astro.props;
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: date,
+  author: {
+    '@type': 'Person',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'IsItAuDHD',
+    url: 'https://isitaudhd.com',
+  },
+};
+---
+
+<BaseLayout title={title} description={description} type="article">
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <header class="mb-10">
+      <div class="flex items-center gap-3 text-sm text-text-light mb-4">
+        <time datetime={date}>{formattedDate}</time>
+        <span class="w-1 h-1 rounded-full bg-border"></span>
+        <span>{readingTime}</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold text-text leading-tight">{title}</h1>
+      <p class="mt-4 text-lg text-text-light leading-relaxed">{description}</p>
+    </header>
+
+    <slot />
+
+    <div class="mt-12 bg-accent/10 rounded-[--radius-xl] p-6 sm:p-8">
+      <h3 class="font-semibold text-text mb-3">Explore More</h3>
+      <ul class="space-y-2">
+        <li><a href="/quiz/is-it-audhd/" class="text-primary hover:text-primary-dark transition-colors">Take the AuDHD Quiz &rarr;</a></li>
+        <li><a href="/quiz/audhd-burnout/" class="text-primary hover:text-primary-dark transition-colors">AuDHD Burnout Check &rarr;</a></li>
+        <li><a href="/learn/what-is-audhd/" class="text-primary hover:text-primary-dark transition-colors">What is AuDHD? &rarr;</a></li>
+        <li><a href="/blog/" class="text-primary hover:text-primary-dark transition-colors">More articles &rarr;</a></li>
+      </ul>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</BaseLayout>

@@ -5,7 +5,7 @@ import QuizCard from '../../components/QuizCard.astro';
 
 <BaseLayout
   title="AuDHD Quizzes"
-  description="Free quizzes to explore AuDHD traits — the overlap of autism and ADHD. Self-assessments for burnout, masking, sensory processing, and more."
+  description="Free quizzes to explore AuDHD traits — the overlap of autism and ADHD. Self-assessments for burnout, masking, sensory processing, executive function, and more."
 >
   <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
     <div class="text-center mb-10">
@@ -16,19 +16,25 @@ import QuizCard from '../../components/QuizCard.astro';
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <!-- Featured quiz -->
+    <div class="mb-8">
       <QuizCard
         title="Is It AuDHD?"
-        description="Our flagship quiz. Explore whether you show traits of both autism and ADHD — the hallmark of AuDHD."
+        description="Our flagship quiz. Explore whether you show traits of both autism and ADHD — the hallmark of AuDHD. 30 questions covering autism traits, ADHD traits, and the unique overlap."
         href="/quiz/is-it-audhd/"
         estimatedTime="5-8 min"
         questionCount={30}
         emoji="🧠"
         featured={true}
       />
+    </div>
+
+    <!-- All quizzes grid -->
+    <h2 class="text-xl font-bold text-text mb-5">All Quizzes</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       <QuizCard
         title="Autism, ADHD, or Both?"
-        description="Not sure which one fits? This quiz helps you see where your traits lean — autism, ADHD, or the overlap."
+        description="Not sure which one fits? Compare autism-typical and ADHD-typical experiences to see where you lean."
         href="/quiz/autism-or-adhd/"
         estimatedTime="4-6 min"
         questionCount={20}
@@ -36,11 +42,51 @@ import QuizCard from '../../components/QuizCard.astro';
       />
       <QuizCard
         title="AuDHD Burnout Check"
-        description="Neurodivergent burnout hits different. Check if you're running on empty from masking, overload, or executive shutdown."
+        description="Neurodivergent burnout hits different. Check for masking fatigue, executive shutdown, and emotional exhaustion."
         href="/quiz/audhd-burnout/"
         estimatedTime="3-5 min"
         questionCount={15}
         emoji="🔥"
+      />
+      <QuizCard
+        title="Sensory Profile"
+        description="Are you a sensory seeker, avoider, or the chaotic mix of both? Map your AuDHD sensory patterns."
+        href="/quiz/sensory-profile/"
+        estimatedTime="4-5 min"
+        questionCount={20}
+        emoji="🌊"
+      />
+      <QuizCard
+        title="Masking Score"
+        description="How much are you hiding your neurodivergent traits? Explore social masking, behavioral masking, and its cost."
+        href="/quiz/masking-score/"
+        estimatedTime="4-5 min"
+        questionCount={20}
+        emoji="🎭"
+      />
+      <QuizCard
+        title="Executive Function Check"
+        description="The AuDHD executive function paradox: wanting perfect plans but never executing them. How's yours?"
+        href="/quiz/executive-function/"
+        estimatedTime="4-5 min"
+        questionCount={18}
+        emoji="⚡"
+      />
+      <QuizCard
+        title="Rejection Sensitivity"
+        description="When literal interpretation meets emotional dysregulation, rejection feels devastating. Check your patterns."
+        href="/quiz/rejection-sensitivity/"
+        estimatedTime="3-4 min"
+        questionCount={15}
+        emoji="💔"
+      />
+      <QuizCard
+        title="AuDHD at Work"
+        description="Open offices, meetings, context-switching — how is your AuDHD brain handling the modern workplace?"
+        href="/quiz/audhd-at-work/"
+        estimatedTime="4-5 min"
+        questionCount={18}
+        emoji="💼"
       />
     </div>
 
@@ -50,6 +96,9 @@ import QuizCard from '../../components/QuizCard.astro';
         If your results resonate with you, we encourage you to speak with a qualified
         mental health professional who specializes in neurodivergence.
       </p>
+      <a href="/learn/getting-assessed/" class="inline-block mt-3 text-primary hover:text-primary-dark font-medium transition-colors">
+        How to get assessed for AuDHD &rarr;
+      </a>
     </div>
   </section>
 </BaseLayout>

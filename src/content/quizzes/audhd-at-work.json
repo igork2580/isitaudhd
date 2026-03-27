@@ -1,0 +1,252 @@
+{
+  "id": "audhd-at-work",
+  "title": "AuDHD at Work",
+  "description": "An 18-question assessment of how AuDHD traits interact with workplace demands. Covers physical environment challenges, social demands of professional life, and the daily battle of task management in jobs designed for neurotypical brains.",
+  "estimatedTime": "5 minutes",
+  "categories": ["environment", "social-demands", "task-management"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Open-plan offices, shared workspaces, or environments where I can hear other people's conversations make it nearly impossible for me to concentrate.",
+      "type": "frequency",
+      "category": "environment",
+      "weight": 1
+    },
+    {
+      "id": "q2",
+      "text": "Fluorescent lighting, air conditioning hums, or the smell of a coworker's lunch affect my ability to function far more than my colleagues seem to experience.",
+      "type": "frequency",
+      "category": "environment",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "You arrive at work and someone is sitting in your usual spot, or your desk setup has been rearranged. What happens?",
+      "type": "scenario",
+      "category": "environment",
+      "weight": 1,
+      "options": [
+        {
+          "label": "It throws off my entire morning. I feel a disproportionate level of distress about the change, can't settle into focus, and spend mental energy either reclaiming my setup or trying to suppress the irritation while pretending it's fine.",
+          "value": 4
+        },
+        {
+          "label": "Mildly annoying, but I adjust and move on without it affecting my productivity or mood significantly.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "I need to control my workspace environment (specific lighting, headphones, temperature, desk arrangement) to be productive, and when I can't control it, my output drops dramatically.",
+      "type": "frequency",
+      "category": "environment",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "Your commute home just ended. What's the first thing you do?",
+      "type": "scenario",
+      "category": "environment",
+      "weight": 1,
+      "options": [
+        {
+          "label": "Collapse. Lights off, no talking, no input. I'm so sensorily overloaded from the work environment that the idea of cooking dinner, having a conversation, or doing anything besides lying motionless feels physically impossible.",
+          "value": 4
+        },
+        {
+          "label": "I might want to unwind, but I still have energy for my evening. Work was tiring, not depleting.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "You're scheduled for a full day of back-to-back meetings with different people and topics. How does this go?",
+      "type": "scenario",
+      "category": "environment",
+      "weight": 1,
+      "options": [
+        {
+          "label": "By meeting three I'm running on fumes. Each meeting requires a different social performance and a complete mental context switch. I retain almost nothing from the later meetings and need the entire next day to recover.",
+          "value": 4
+        },
+        {
+          "label": "It's tiring but manageable. I might need a quiet lunch break, but I can get through the day without significant fallout.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "I find workplace small talk (\"How was your weekend?\", watercooler chat, lunch conversations about nothing) exhausting because I have to perform interest and spontaneity that don't come naturally.",
+      "type": "frequency",
+      "category": "social-demands",
+      "weight": 1
+    },
+    {
+      "id": "q8",
+      "text": "I miss unwritten workplace rules (when a meeting is \"really\" over, when \"let me think about it\" means no, when a casual comment was actually a directive) and it's created problems for me professionally.",
+      "type": "frequency",
+      "category": "social-demands",
+      "weight": 1
+    },
+    {
+      "id": "q9",
+      "text": "Your manager gives you feedback in a casual, indirect way during a hallway conversation. What happens?",
+      "type": "scenario",
+      "category": "social-demands",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I either miss that it was feedback entirely (and get blindsided later when my performance review references it) or I catch it hours later and then spiral into anxiety about what exactly they meant and how serious it was.",
+          "value": 4
+        },
+        {
+          "label": "I pick up on the intent in the moment and can respond or adjust without major confusion or delayed processing.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Office politics, social hierarchies, and the unspoken rules about who to CC on emails, when to speak up in meetings, and how to navigate chain of command feel like a foreign language I'm constantly failing to translate.",
+      "type": "frequency",
+      "category": "social-demands",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "I mask so heavily at work that my colleagues would be shocked to see how I actually function at home. The person they know isn't really me.",
+      "type": "frequency",
+      "category": "social-demands",
+      "weight": 1
+    },
+    {
+      "id": "q12",
+      "text": "A coworker wants to collaborate on a project, which means constant check-ins, shared documents, and real-time communication. How do you handle it?",
+      "type": "scenario",
+      "category": "social-demands",
+      "weight": 1,
+      "options": [
+        {
+          "label": "The constant interruptions destroy my ability to enter deep focus, the social demands of collaboration drain my energy, and I produce worse work than I would have alone. But I can't say that without sounding like a difficult team member.",
+          "value": 4
+        },
+        {
+          "label": "Collaboration has tradeoffs, but I can adapt my working style without it being a major source of stress or conflict.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "I struggle to prioritize when everything on my task list feels equally urgent (or equally uninteresting). I either freeze and do nothing or pick tasks based on what's most stimulating rather than what's most important.",
+      "type": "frequency",
+      "category": "task-management",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "I produce my best work in intense, hyperfocused bursts and my worst work when forced into consistent, steady output over long periods. Standard work schedules are at odds with how my brain actually performs.",
+      "type": "frequency",
+      "category": "task-management",
+      "weight": 1
+    },
+    {
+      "id": "q15",
+      "text": "Context switching between different projects, clients, or task types within the same day costs me significantly more time and energy than my neurotypical colleagues seem to experience.",
+      "type": "frequency",
+      "category": "task-management",
+      "weight": 1
+    },
+    {
+      "id": "q16",
+      "text": "I miss deadlines not because I don't care or don't have the skills, but because my brain misjudges how long things will take, can't initiate the work until the last possible moment, or loses track of time entirely.",
+      "type": "frequency",
+      "category": "task-management",
+      "weight": 1
+    },
+    {
+      "id": "q17",
+      "text": "I spend excessive time perfecting details that don't matter to anyone but me, then run out of time for the parts that actually affect the deadline or deliverable.",
+      "type": "frequency",
+      "category": "task-management",
+      "weight": 1
+    },
+    {
+      "id": "q18",
+      "text": "Your job requires you to track multiple ongoing projects with different timelines, stakeholders, and requirements simultaneously. What's your experience?",
+      "type": "scenario",
+      "category": "task-management",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I either hyperfocus on one project and neglect the others entirely, or build an elaborate tracking system that I maintain obsessively for two weeks before it collapses and everything falls through the cracks at once.",
+          "value": 4
+        },
+        {
+          "label": "It's challenging but I can juggle multiple projects with standard tools and reasonable effort. Things occasionally slip but not in a pattern that causes real problems.",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["workplace"],
+    "maxPerAxis": 72,
+    "profiles": [
+      {
+        "id": "significant-struggles",
+        "title": "Significant Workplace Struggles",
+        "emoji": "🏢",
+        "description": "Your responses indicate that the standard workplace is working against your brain on multiple fronts. The physical environment overloads your senses, the social demands drain your masking energy, and the task management expectations clash with how your brain actually processes and produces work. This isn't a performance problem. It's a fit problem. Your brain can do the work. It just can't do the work AND manage the sensory environment AND perform the social expectations AND maintain the expected schedule all at once. Something always has to give, and right now it sounds like that \"something\" might be you.",
+        "recommendations": [
+          "Advocate for concrete accommodations. Noise-canceling headphones, a desk away from foot traffic, flexible hours, written rather than verbal instructions, and the ability to work from home when deep focus is needed. Frame these as productivity tools, because they are.",
+          "If disclosure is safe in your workplace, consider sharing your neurodivergent needs with your manager. You don't need a diagnosis to say \"I produce my best work with minimal interruptions and written task briefs.\" Focus on the practical outcome, not the label.",
+          "Restructure your workday around your brain's natural patterns if you have any flexibility. Batch meetings into one block. Protect at least one long uninterrupted work session daily. Schedule administrative tasks for low-energy periods. Even small structural changes can make a significant difference.",
+          "Seriously evaluate whether your current role and environment are sustainable long-term. If the mismatch between your neurology and the job's demands is severe, no amount of coping strategies will prevent burnout. Sometimes the answer isn't adapting harder. It's finding a better fit."
+        ],
+        "condition": { "workplace": 50 }
+      },
+      {
+        "id": "moderate-struggles",
+        "title": "Moderate Workplace Struggles",
+        "emoji": "⚙️",
+        "description": "Your responses show real friction between your AuDHD brain and workplace demands, though you're managing to stay functional. You've probably built workarounds for some challenges while others still catch you off guard. The cost of maintaining this balance is likely higher than it appears from the outside. Coworkers might see someone who's doing fine. You know how much effort \"fine\" actually takes.",
+        "recommendations": [
+          "Identify the top 2-3 workplace factors that drain you most and focus your energy on mitigating those specifically. Trying to fix everything at once leads to burnout. Pick the biggest energy leaks first.",
+          "Document your accommodation needs even if you're not ready to disclose them formally. Having a clear list (\"I need 30 minutes of uninterrupted time after meetings,\" \"I work best with written instructions\") makes it easier to advocate for yourself when the opportunity comes.",
+          "Build recovery into your work week intentionally. If Mondays are meeting-heavy, protect Tuesday morning for solo work. If Friday afternoons are socially exhausting, don't schedule anything demanding for Friday evening. Treat your energy like the finite resource it is.",
+          "Connect with other neurodivergent professionals (online communities, workplace ERGs if they exist, professional networks). Sharing strategies with people who understand the specific challenges of AuDHD at work is more useful than generic career advice."
+        ],
+        "condition": { "workplace": 32 }
+      },
+      {
+        "id": "some-challenges",
+        "title": "Some Workplace Challenges",
+        "emoji": "🌤️",
+        "description": "Your responses suggest some workplace-related challenges, but they're not overwhelming your ability to function professionally. You might have a job that aligns reasonably well with your neurotype, or you've developed effective coping strategies, or your particular AuDHD profile doesn't clash as hard with your work environment. Whatever the reason, the friction exists but isn't grinding you down.",
+        "recommendations": [
+          "Note what's working in your current setup. If your workplace challenges are mild, it's probably because something about your environment, role, or schedule happens to align with your needs. Knowing what that is helps you protect it.",
+          "Pay attention to whether the challenges you do have are escalating or stable. Mild challenges that slowly increase over time (as job demands grow, as masking accumulates, as tolerance wears thin) can tip into serious problems without warning.",
+          "Even with mild challenges, small accommodations can reduce unnecessary friction. If something simple (a different desk location, a schedule adjustment, a communication preference) would help, it's worth asking."
+        ],
+        "condition": { "workplace": 18 }
+      },
+      {
+        "id": "coping-well",
+        "title": "Coping Well at Work",
+        "emoji": "🌿",
+        "description": "Your responses suggest you're currently managing workplace demands without significant AuDHD-related friction. This could mean your job is a good fit for your neurology, your work environment is unusually accommodating, or you've built effective strategies over time. It's also possible that you work in a context (remote, flexible hours, autonomous role) that naturally sidesteps many of the common AuDHD workplace challenges.",
+        "recommendations": [
+          "If you're thriving at work, consider what specific factors make this possible. Remote work? A predictable routine? Autonomy over your schedule? Understanding what works for you is valuable information for future career decisions.",
+          "If your workplace fit feels good right now, be mindful of changes that could disrupt it. A new manager, a team restructure, a return-to-office mandate, or a role change could shift the equation quickly.",
+          "If this result doesn't match your felt experience and work actually feels harder than these scores suggest, consider retaking the quiz on a day when workplace stress is high. Results can vary depending on whether you're in a good stretch or a rough one."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}

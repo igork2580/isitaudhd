@@ -1,0 +1,207 @@
+{
+  "id": "sensory-profile",
+  "title": "AuDHD Sensory Profile",
+  "description": "A 20-question assessment exploring your sensory processing patterns. Identifies whether you lean toward sensory seeking, sensory avoiding, or the classic AuDHD paradox of both at once.",
+  "estimatedTime": "5 minutes",
+  "categories": ["sensory-seeking", "sensory-avoiding", "sensory-mixed"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "I crank up music, seek out intense flavors, or watch videos at high volume because mild stimulation doesn't register for me.",
+      "type": "frequency",
+      "category": "sensory-seeking",
+      "weight": 1
+    },
+    {
+      "id": "q2",
+      "text": "I fidget with objects, chew on things, or seek out physical pressure (tight clothing, weighted blankets, bear hugs) to feel grounded.",
+      "type": "frequency",
+      "category": "sensory-seeking",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "I gravitate toward strong physical sensations like spicy food, cold showers, or intense exercise because they make my brain feel alive.",
+      "type": "frequency",
+      "category": "sensory-seeking",
+      "weight": 1
+    },
+    {
+      "id": "q4",
+      "text": "I touch surfaces, fabrics, or objects compulsively because the tactile feedback is satisfying or even necessary for me to feel present.",
+      "type": "frequency",
+      "category": "sensory-seeking",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "I add extra seasoning, hot sauce, or sugar to food because standard flavors taste bland and under-stimulating to me.",
+      "type": "frequency",
+      "category": "sensory-seeking",
+      "weight": 1
+    },
+    {
+      "id": "q6",
+      "text": "I seek out movement (rocking, spinning, bouncing my leg) even in situations where I'm expected to stay still.",
+      "type": "frequency",
+      "category": "sensory-seeking",
+      "weight": 1
+    },
+    {
+      "id": "q7",
+      "text": "I need background noise, music, or a TV on to function. Complete silence feels uncomfortable, almost oppressive.",
+      "type": "frequency",
+      "category": "sensory-seeking",
+      "weight": 1
+    },
+    {
+      "id": "q8",
+      "text": "Fluorescent lights, certain LED flickers, or bright overhead lighting give me headaches or make me feel irritable and unfocused.",
+      "type": "frequency",
+      "category": "sensory-avoiding",
+      "weight": 1
+    },
+    {
+      "id": "q9",
+      "text": "I cut tags out of clothing, avoid certain fabrics, or have a very limited wardrobe because most textures feel unbearable against my skin.",
+      "type": "frequency",
+      "category": "sensory-avoiding",
+      "weight": 1
+    },
+    {
+      "id": "q10",
+      "text": "Overlapping sounds (multiple conversations, music plus TV, traffic noise) make me want to cover my ears or leave immediately.",
+      "type": "frequency",
+      "category": "sensory-avoiding",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "Certain food textures (slimy, gritty, mushy, chewy) trigger a gag reflex or visceral disgust that goes beyond simple preference.",
+      "type": "frequency",
+      "category": "sensory-avoiding",
+      "weight": 1
+    },
+    {
+      "id": "q12",
+      "text": "I avoid crowded places like grocery stores, malls, or concerts because the combination of noise, smells, lights, and proximity to strangers overwhelms my system.",
+      "type": "frequency",
+      "category": "sensory-avoiding",
+      "weight": 1
+    },
+    {
+      "id": "q13",
+      "text": "Someone touching me unexpectedly (a tap on the shoulder, a casual hug) makes me flinch or feel a jolt of distress, even from people I love.",
+      "type": "frequency",
+      "category": "sensory-avoiding",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "Strong perfumes, cleaning products, or cooking smells can make me nauseous or give me an instant headache, even when others barely notice them.",
+      "type": "frequency",
+      "category": "sensory-avoiding",
+      "weight": 1
+    },
+    {
+      "id": "q15",
+      "text": "I blast loud music through headphones to block out sensory input that I can't control, using intense stimulation to manage overwhelm.",
+      "type": "frequency",
+      "category": "sensory-mixed",
+      "weight": 1
+    },
+    {
+      "id": "q16",
+      "text": "The same sensory input (a specific sound, texture, or light level) can feel amazing one day and unbearable the next, with no pattern I can predict.",
+      "type": "frequency",
+      "category": "sensory-mixed",
+      "weight": 1
+    },
+    {
+      "id": "q17",
+      "text": "I crave physical touch and deep pressure but can only tolerate it on my own terms. Initiated by me: calming. Initiated by someone else: overwhelming.",
+      "type": "frequency",
+      "category": "sensory-mixed",
+      "weight": 1
+    },
+    {
+      "id": "q18",
+      "text": "I use one strong sensory input to cancel out another. A scented candle to block out cooking smells, heavy blankets to counteract restless energy, noise-canceling headphones playing white noise.",
+      "type": "frequency",
+      "category": "sensory-mixed",
+      "weight": 1
+    },
+    {
+      "id": "q19",
+      "text": "I simultaneously feel bored (understimulated) and overwhelmed (overstimulated) at the same time, and neither adding nor removing stimulation fixes it.",
+      "type": "frequency",
+      "category": "sensory-mixed",
+      "weight": 1
+    },
+    {
+      "id": "q20",
+      "text": "My sensory needs shift throughout the day. Mornings I might need silence and soft textures. By afternoon I'm seeking loud music and movement. By evening I can't tolerate anything at all.",
+      "type": "frequency",
+      "category": "sensory-mixed",
+      "weight": 1
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["sensory"],
+    "maxPerAxis": 80,
+    "profiles": [
+      {
+        "id": "sensory-seeker",
+        "title": "Sensory Seeker",
+        "emoji": "🎪",
+        "description": "Your responses point toward a brain that's hungry for input. You likely need more intense, more varied, or more frequent sensory experiences to feel regulated and present. This is common in ADHD-dominant profiles where the nervous system runs on a higher threshold, meaning ordinary stimulation barely registers. You're not being dramatic. Your brain genuinely needs more to work with.",
+        "recommendations": [
+          "Build sensory-seeking into your daily routine on purpose. Scheduled movement breaks, crunchy or spicy snacks, textured fidget tools, and playlists that match your energy level. Meeting the need proactively reduces impulsive seeking later.",
+          "Explore proprioceptive input (heavy work, resistance bands, weighted blankets, compression clothing) as a regulation tool. It's one of the most effective ways to satisfy a sensory-seeking nervous system without overstimulating yourself.",
+          "Pay attention to when seeking ramps up. It often signals that your baseline stimulation dropped too low (boring meeting, understimulating task, too much sitting). Catching it early lets you intervene before you hit a wall.",
+          "Be honest with the people in your life about what you need. \"I focus better with music\" or \"I need to move while I think\" aren't excuses. They're accommodations."
+        ],
+        "condition": { "sensory": 60 }
+      },
+      {
+        "id": "sensory-avoider",
+        "title": "Sensory Avoider Pattern",
+        "emoji": "🛡️",
+        "description": "Your responses show strong sensory avoidance paired with lower seeking behaviors. Your nervous system processes sensory input more intensely than most people's, which means environments that feel \"normal\" to others can feel genuinely painful or disorienting to you. This pattern often shows up strongly in autism-dominant profiles. The world is literally louder, brighter, and more textured for you, and your avoidance strategies are protective, not oversensitive.",
+        "recommendations": [
+          "Treat sensory accommodations as non-negotiable, not optional comfort. Noise-canceling headphones, sunglasses indoors, specific clothing textures, controlled lighting: these aren't luxuries. They're the equivalent of glasses for someone who can't see.",
+          "Map your sensory triggers in detail. Which specific sounds, lights, textures, or smells hit hardest? Knowing your particular profile lets you prepare for and avoid the worst offenders instead of just bracing for everything.",
+          "Create a sensory-safe space at home where every element is within your tolerance. One room (or even one corner) where lighting, sound, temperature, and textures are all under your control. Retreat there before you hit meltdown, not after.",
+          "Communicate your needs to the people you spend time with. \"I need to sit facing away from the window\" or \"Can we go somewhere quieter?\" are reasonable requests that most people will accommodate once they understand why."
+        ],
+        "condition": { "sensory": 40 }
+      },
+      {
+        "id": "sensory-mixed",
+        "title": "Sensory Paradox (AuDHD Pattern)",
+        "emoji": "🌀",
+        "description": "Welcome to the AuDHD sensory paradox. Your responses show the characteristic pattern of simultaneously seeking and avoiding stimulation, often at the same time. One part of your brain screams \"too much\" while another screams \"not enough,\" and finding the sweet spot feels like threading a needle on a rollercoaster. This isn't confusion or inconsistency. It's the natural result of having both a low stimulation threshold (autism) and a high stimulation need (ADHD) running in the same nervous system.",
+        "recommendations": [
+          "Learn to distinguish between \"understimulated\" and \"overstimulated\" in real time. They can feel surprisingly similar (irritability, restlessness, inability to focus), but they require opposite interventions. Keeping a brief log for a week or two can help you spot the difference.",
+          "Build a personal toolkit of sensory strategies for both directions. Seeking tools (fidgets, music, movement, crunchy snacks) AND calming tools (noise-canceling headphones, weighted blanket, dim lighting, cool water). Having both ready means you can match the intervention to the actual need.",
+          "Accept that your sensory needs will contradict themselves. You might need silence AND stimulation. Heavy pressure AND freedom to move. Predictable textures AND novel input. Work with the contradiction instead of trying to resolve it into one neat category.",
+          "Experiment with layered sensory environments: controlled input on one channel while reducing it on another. Noise-canceling headphones playing familiar music (auditory control) while sitting under a weighted blanket (proprioceptive input) in dim lighting (visual calm). Mix and match until you find combinations that regulate both sides."
+        ],
+        "condition": { "sensory": 35 }
+      },
+      {
+        "id": "low-sensory",
+        "title": "Typical Sensory Processing",
+        "emoji": "🌿",
+        "description": "Your responses don't indicate significant sensory processing differences based on this quiz. Your relationship with sensory input seems to fall within a typical range, where most environments are manageable without major accommodations. That said, everyone has some sensory preferences, and if specific questions resonated with you, those individual sensitivities are still real and worth honoring.",
+        "recommendations": [
+          "If a few specific questions scored high, pay attention to those areas. A generally low score doesn't cancel out one or two genuine sensory sensitivities that might be affecting your daily comfort.",
+          "Consider whether you've adapted your life so thoroughly around your sensory needs that the avoidance feels invisible. Some people score low because they've already eliminated their triggers without realizing it.",
+          "Sensory processing can shift over time, especially during stress, burnout, or hormonal changes. If you came to this quiz because something felt off recently, it might be worth revisiting in a different period."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}

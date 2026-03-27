@@ -1,0 +1,266 @@
+{
+  "id": "masking-score",
+  "title": "How Much Are You Masking?",
+  "description": "A 20-question assessment measuring how much energy you spend performing neurotypicality. Covers social masking, behavioral suppression, and the hidden internal cost of keeping up appearances.",
+  "estimatedTime": "5 minutes",
+  "categories": ["social-masking", "behavioral-masking", "internal-cost"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "I consciously monitor my facial expressions during conversations to make sure I'm showing the \"right\" reaction.",
+      "type": "likert",
+      "category": "social-masking",
+      "weight": 1
+    },
+    {
+      "id": "q2",
+      "text": "I've studied how other people laugh, greet each other, or make small talk, and I replicate those patterns even though they don't come naturally.",
+      "type": "likert",
+      "category": "social-masking",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "I prepare scripts or rehearse what I'll say before social interactions, even casual ones like ordering coffee or chatting with a coworker.",
+      "type": "likert",
+      "category": "social-masking",
+      "weight": 1
+    },
+    {
+      "id": "q4",
+      "text": "I force myself to make eye contact because I know people expect it, even though it's uncomfortable or makes it harder to think.",
+      "type": "likert",
+      "category": "social-masking",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "Someone compliments your work in front of a group. What do you do?",
+      "type": "scenario",
+      "category": "social-masking",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I perform the expected humble smile and \"thanks, it was a team effort\" response, while internally either panicking about the attention or struggling to process the compliment at all.",
+          "value": 4
+        },
+        {
+          "label": "I react naturally, whether that's saying thanks, feeling pleased, or being a bit awkward about it. My internal and external reactions roughly match.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "I adjust my personality (vocabulary, energy level, interests I mention) depending on who I'm with, and each version feels like a different character I'm playing.",
+      "type": "likert",
+      "category": "social-masking",
+      "weight": 1
+    },
+    {
+      "id": "q7",
+      "text": "You're at a dinner with people you don't know well. The conversation shifts to a topic you're deeply knowledgeable about. What happens?",
+      "type": "scenario",
+      "category": "social-masking",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I actively suppress my enthusiasm and limit what I share because I've learned that going deep makes people uncomfortable. I give a surface-level comment and redirect to someone else.",
+          "value": 4
+        },
+        {
+          "label": "I share what I know at a level that feels natural to the conversation. I might get excited, but I don't feel like I'm performing a restraint act.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "I suppress my natural body movements (stimming, fidgeting, rocking, pacing) in front of others because I don't want to be seen as weird.",
+      "type": "likert",
+      "category": "behavioral-masking",
+      "weight": 1
+    },
+    {
+      "id": "q9",
+      "text": "I pretend to understand social cues or jokes that I actually missed, because asking for clarification has gotten me judged before.",
+      "type": "likert",
+      "category": "behavioral-masking",
+      "weight": 1
+    },
+    {
+      "id": "q10",
+      "text": "I eat foods that bother me, tolerate sensory environments that hurt, or participate in activities I find overwhelming because refusing would require explaining myself.",
+      "type": "likert",
+      "category": "behavioral-masking",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "I've trained myself to respond to questions with a slight delay so my answers seem \"thought through\" rather than instant, because fast responses made people suspicious or uncomfortable.",
+      "type": "likert",
+      "category": "behavioral-masking",
+      "weight": 1
+    },
+    {
+      "id": "q12",
+      "text": "Your boss gives you vague instructions on a task. What do you do?",
+      "type": "scenario",
+      "category": "behavioral-masking",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I pretend to understand, then spend hours anxiously trying to figure out what they meant rather than asking, because I've been told I ask \"too many questions\" or need things spelled out too much.",
+          "value": 4
+        },
+        {
+          "label": "I ask for clarification. It might be slightly awkward but it doesn't feel like a threat to how people perceive me.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "I hide my real emotional state behind a neutral or pleasant expression. People regularly tell me I'm \"so calm\" or \"always chill\" when internally I'm overwhelmed, furious, or falling apart.",
+      "type": "likert",
+      "category": "behavioral-masking",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "I mirror the body language, speech patterns, and energy of whoever I'm talking to, almost automatically, to the point where I'm not sure which behaviors are genuinely mine.",
+      "type": "likert",
+      "category": "behavioral-masking",
+      "weight": 1
+    },
+    {
+      "id": "q15",
+      "text": "You just got home from a work event that everyone said was fun. How do you feel?",
+      "type": "scenario",
+      "category": "internal-cost",
+      "weight": 1,
+      "options": [
+        {
+          "label": "Completely emptied out. I performed \"fun\" for three hours straight and now I need to lie in a dark room in silence until my nervous system resets. Talking to anyone, even my partner, feels impossible right now.",
+          "value": 4
+        },
+        {
+          "label": "Tired but in a normal way. I might want a quiet evening, but I don't feel like I need to recover from a performance.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "A friend cancels plans at the last minute. What's your honest first reaction?",
+      "type": "scenario",
+      "category": "internal-cost",
+      "weight": 1,
+      "options": [
+        {
+          "label": "Overwhelming relief. Not because I don't care about them, but because the energy I'd been stockpiling for the performance of \"normal socializing\" can now be released.",
+          "value": 4
+        },
+        {
+          "label": "Disappointment, or mild relief, but not the kind that makes me question whether I actually enjoy spending time with people at all.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "I've lost my sense of who I actually am underneath all the adaptations. If someone asked me what I'm \"really like,\" I'd struggle to answer.",
+      "type": "likert",
+      "category": "internal-cost",
+      "weight": 1
+    },
+    {
+      "id": "q18",
+      "text": "I experience sudden, intense shutdowns (going nonverbal, zoning out, emotional flooding) that seem to come from nowhere, but they always happen after periods of heavy social performance.",
+      "type": "likert",
+      "category": "internal-cost",
+      "weight": 1
+    },
+    {
+      "id": "q19",
+      "text": "It's a weekend and you finally have to reply to a friend's text from three days ago. What happens?",
+      "type": "scenario",
+      "category": "internal-cost",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I spend 20 minutes crafting a response that sounds casual and natural, agonizing over whether my tone sounds \"off,\" then feel drained by a text that took someone else 10 seconds to write.",
+          "value": 4
+        },
+        {
+          "label": "I type a quick reply and move on. I might feel bad about the delay, but the act of texting itself doesn't cost significant energy.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "I feel resentment toward people who get to just \"be themselves\" in social situations without the constant mental overhead of calculating every word, gesture, and expression.",
+      "type": "likert",
+      "category": "internal-cost",
+      "weight": 1
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["masking"],
+    "maxPerAxis": 80,
+    "profiles": [
+      {
+        "id": "heavy-masking",
+        "title": "Heavy Masking",
+        "emoji": "🎭",
+        "description": "Your responses indicate you're running an extensive, energy-intensive masking operation. Social interactions, work environments, and even casual encounters involve a constant internal performance. You've likely been doing this for so long that some of it feels automatic, but automatic doesn't mean free. The cognitive and emotional cost is real, and it accumulates. Many heavy maskers don't realize how much energy they're spending until something forces the mask to slip, usually burnout, illness, or a major life change.",
+        "recommendations": [
+          "Identify one relationship or environment where you can start unmasking safely. Not all at once, but gradually letting the real version of you show up. A trusted friend, a therapist, an online community. One space where performance isn't required.",
+          "Track your masking cost in concrete terms. How many hours of recovery do you need after specific situations? Which interactions drain you fastest? Data helps you make informed decisions about where to spend your limited masking energy.",
+          "Start saying \"no\" to sensory and social situations that exist purely because you haven't been giving yourself permission to opt out. You don't owe anyone a performance of normalcy at the cost of your health.",
+          "Consider working with a therapist who understands neurodivergent masking (not just social anxiety, which can look similar but has different roots). Unmasking is a process, and having support makes it safer."
+        ],
+        "condition": { "masking": 55 }
+      },
+      {
+        "id": "moderate-masking",
+        "title": "Moderate Masking",
+        "emoji": "🪞",
+        "description": "Your responses show significant masking behavior, though you may have some areas where you feel more authentically yourself. You're likely spending more energy on social performance than you realize, but you might also have pockets of life where the mask comes off, specific people, environments, or situations where you can relax the act. The challenge at this level is that masking feels manageable enough to maintain, so the slow drain on your energy can go unnoticed until it compounds.",
+        "recommendations": [
+          "Expand the spaces where you don't mask. If you have one safe person, find a second. If you unmask at home, try it in one low-stakes social setting. Gradual expansion builds confidence that the world won't end when you drop the act.",
+          "Notice which masking behaviors are protective (keeping you safe in genuinely hostile environments) versus habitual (running on autopilot in spaces where you'd actually be accepted as-is). Redirect your energy toward unmasking where it's safe.",
+          "Practice micro-unmasking: let yourself stim in public, skip the forced laugh at a joke that wasn't funny, say \"I didn't catch that\" instead of pretending you understood. Small authenticity builds momentum.",
+          "Check whether your \"safe\" environments are truly safe or just less demanding. Real safety means you can be visibly neurodivergent without consequences, not just that the performance is easier."
+        ],
+        "condition": { "masking": 35 }
+      },
+      {
+        "id": "light-masking",
+        "title": "Light Masking",
+        "emoji": "🌤️",
+        "description": "Your responses suggest relatively low masking levels. You may adjust your behavior somewhat in certain social contexts (most people do), but it doesn't appear to consume a major portion of your energy. This could mean you've found environments that accept you as you are, you've done significant unmasking work already, or your neurodivergent traits don't trigger as much social friction in your current context.",
+        "recommendations": [
+          "Protect what you've built. If your low masking score comes from having accepting people and environments around you, recognize that as valuable and guard it during life transitions.",
+          "If your low score surprises you and daily life still feels exhausting, consider whether you might be masking in ways this quiz didn't capture. Masking can be so ingrained that it doesn't register as effort anymore.",
+          "Share your experience with others who are struggling with heavy masking. Your strategies (whether deliberate or circumstantial) could be genuinely helpful to someone still deep in the performance."
+        ],
+        "condition": { "masking": 18 }
+      },
+      {
+        "id": "minimal-masking",
+        "title": "Minimal Masking",
+        "emoji": "🌱",
+        "description": "Your responses indicate very little masking behavior. You seem to move through social and professional life without a heavy performance layer between your internal experience and external presentation. For some people this means their neurodivergent traits are mild enough that adaptation isn't required. For others, it means they've reached a point where authenticity takes priority over conformity. Either way, the energy you're saving on performance is significant.",
+        "recommendations": [
+          "If you took this quiz because someone suggested you might be masking and you genuinely don't relate, trust your experience. Not every neurodivergent person masks heavily, and the absence of masking doesn't invalidate other neurodivergent traits.",
+          "Consider whether your low masking might be context-dependent. Some people mask very little in their current life but remember periods (school, a previous job, a past relationship) where masking was constant.",
+          "If you live or work alongside someone who masks heavily, understanding what they go through can strengthen that relationship. The effort they expend to appear \"normal\" is real even if it's invisible to you."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}

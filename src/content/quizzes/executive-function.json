@@ -1,0 +1,192 @@
+{
+  "id": "executive-function",
+  "title": "AuDHD Executive Function Check",
+  "description": "An 18-question assessment of executive function challenges specific to AuDHD. Covers task initiation, working memory, and cognitive flexibility, including the unique conflict between wanting perfect systems and being unable to use them.",
+  "estimatedTime": "5 minutes",
+  "categories": ["task-initiation", "working-memory", "flexibility"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "I know exactly what I need to do, I want to do it, nothing is stopping me, and yet I sit there unable to start. My body and brain just won't connect.",
+      "type": "frequency",
+      "category": "task-initiation",
+      "weight": 1
+    },
+    {
+      "id": "q2",
+      "text": "I spend so long planning, organizing, and preparing for a task that I run out of time or energy to actually do it.",
+      "type": "frequency",
+      "category": "task-initiation",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "I can only start a task when the deadline panic kicks in. Without urgency, my brain treats everything as optional, no matter how important I know it is.",
+      "type": "frequency",
+      "category": "task-initiation",
+      "weight": 1
+    },
+    {
+      "id": "q4",
+      "text": "I avoid starting tasks because I can't figure out the \"right\" first step. The task feels like one giant block, and breaking it into smaller pieces takes more effort than the task itself.",
+      "type": "frequency",
+      "category": "task-initiation",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "I create elaborate systems (color-coded planners, detailed spreadsheets, meticulous routines) and then abandon them within days because following them feels suffocating.",
+      "type": "frequency",
+      "category": "task-initiation",
+      "weight": 1
+    },
+    {
+      "id": "q6",
+      "text": "I need the conditions to be \"just right\" before I can work. Wrong lighting, wrong music, wrong chair, wrong time of day, and the whole attempt collapses before it starts.",
+      "type": "frequency",
+      "category": "task-initiation",
+      "weight": 1
+    },
+    {
+      "id": "q7",
+      "text": "I walk into a room and immediately forget why I went there. Retracing my steps sometimes helps, but often the thought is just gone.",
+      "type": "frequency",
+      "category": "working-memory",
+      "weight": 1
+    },
+    {
+      "id": "q8",
+      "text": "I lose my train of thought mid-sentence, even when I'm passionate about the topic and was building toward a point I genuinely wanted to make.",
+      "type": "frequency",
+      "category": "working-memory",
+      "weight": 1
+    },
+    {
+      "id": "q9",
+      "text": "I forget verbal instructions almost immediately after hearing them, even when I was paying full attention. If it's not written down, it didn't happen.",
+      "type": "frequency",
+      "category": "working-memory",
+      "weight": 1
+    },
+    {
+      "id": "q10",
+      "text": "I set timers and reminders obsessively because I know my brain won't hold onto the information. Without external systems, appointments, tasks, and deadlines simply vanish.",
+      "type": "frequency",
+      "category": "working-memory",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "I can remember obscure facts about my interests in extraordinary detail but forget whether I took my medication 10 minutes ago.",
+      "type": "frequency",
+      "category": "working-memory",
+      "weight": 1
+    },
+    {
+      "id": "q12",
+      "text": "I struggle to follow multi-step processes unless I can see all the steps at once. Holding steps 2 through 5 in my head while doing step 1 feels impossible.",
+      "type": "frequency",
+      "category": "working-memory",
+      "weight": 1
+    },
+    {
+      "id": "q13",
+      "text": "When I'm focused on something and get interrupted, it takes me 20-30 minutes (or longer) to get back to where I was. The mental thread just snaps.",
+      "type": "frequency",
+      "category": "flexibility",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "Switching between different types of tasks (going from writing to email to a phone call back to writing) drains me far more than doing one type of task for an extended period.",
+      "type": "frequency",
+      "category": "flexibility",
+      "weight": 1
+    },
+    {
+      "id": "q15",
+      "text": "When a plan changes unexpectedly, I feel a physical stress response (racing heart, tension, frustration) even when I logically know the new plan is fine or even better.",
+      "type": "frequency",
+      "category": "flexibility",
+      "weight": 1
+    },
+    {
+      "id": "q16",
+      "text": "I get stuck in mental loops where I know the approach isn't working but I can't shift to a different strategy. I keep trying the same thing harder instead of trying something different.",
+      "type": "frequency",
+      "category": "flexibility",
+      "weight": 1
+    },
+    {
+      "id": "q17",
+      "text": "Transitions between activities (leaving the house, ending one project to start another, switching from work mode to relaxation mode) are disproportionately difficult for me.",
+      "type": "frequency",
+      "category": "flexibility",
+      "weight": 1
+    },
+    {
+      "id": "q18",
+      "text": "I struggle to adjust my level of effort to match the task. I either give 100% (perfectionist research and execution) or 0% (complete avoidance). There's no middle gear.",
+      "type": "frequency",
+      "category": "flexibility",
+      "weight": 1
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["executive"],
+    "maxPerAxis": 72,
+    "profiles": [
+      {
+        "id": "significant-challenges",
+        "title": "Significant Executive Function Challenges",
+        "emoji": "🧩",
+        "description": "Your responses indicate substantial executive function difficulties across task initiation, working memory, and cognitive flexibility. The AuDHD pattern is especially clear here: you likely build beautiful systems that your ADHD brain refuses to follow, and you need structure that your own neurology constantly undermines. This isn't a willpower problem. Executive function is a neurological capacity, and yours is being pulled in two directions at once. The autistic part of your brain wants order and predictability. The ADHD part can't sustain attention on the ordered system. The result is a specific kind of frustration that generic productivity advice doesn't touch.",
+        "recommendations": [
+          "Stop trying to find the \"perfect\" system. Instead, build the minimum viable structure. One list, one timer, one anchor routine. AuDHD brains rebel against elaborate systems but fall apart without any structure at all. The sweet spot is minimal scaffolding.",
+          "Use external memory everywhere. Put things in your calendar the moment you hear about them. Set phone alarms for transitions. Use visual reminders (sticky notes, whiteboards) in the physical spaces where you need them. Your brain doesn't hold information reliably, so stop asking it to.",
+          "Body doubling (working alongside someone, even virtually) can bypass the initiation problem. Your brain may refuse to start a task alone but engage immediately when someone else is present, even if they're doing something completely different.",
+          "If executive function challenges are significantly affecting your work, relationships, or daily functioning, consider discussing them with a clinician who understands AuDHD. Medication, coaching, and occupational therapy can all help, and they're not cheating. They're tools."
+        ],
+        "condition": { "executive": 50 }
+      },
+      {
+        "id": "moderate-challenges",
+        "title": "Moderate Executive Function Challenges",
+        "emoji": "🔄",
+        "description": "Your responses show meaningful executive function difficulties that are probably affecting your daily life, even if you've built workarounds. You likely have some strategies that work (at least sometimes) but find that they require conscious effort to maintain. On good days you might feel like you've figured it out. On bad days the whole system falls apart. That inconsistency itself is characteristic of AuDHD executive function: it's not that you can't do it, it's that your ability to do it fluctuates unpredictably.",
+        "recommendations": [
+          "Focus on building habits around transitions, since that's where AuDHD executive function tends to break down hardest. A \"leaving the house\" checklist by the door, a 5-minute buffer between meetings, a shutdown routine at the end of work. Transition support pays outsized dividends.",
+          "When you find a strategy that works, write it down immediately. AuDHD brains are notorious for solving a problem, forgetting the solution, and then spending weeks reinventing it. Keep a \"things that work for me\" list.",
+          "Accept variable productivity as your baseline. Some days will be highly productive. Others won't. Planning for that variation (keeping deadlines loose where possible, not scheduling demanding tasks back-to-back) reduces the shame spiral when a low day hits.",
+          "Consider whether your current environment is helping or hurting. Sometimes executive function challenges are dramatically worse in the wrong context (open offices, unpredictable schedules, jobs with constant task-switching) and dramatically better in the right one."
+        ],
+        "condition": { "executive": 32 }
+      },
+      {
+        "id": "mild-challenges",
+        "title": "Mild Executive Function Challenges",
+        "emoji": "🌤️",
+        "description": "Your responses suggest some executive function friction, but it's not dominating your daily life. You might notice specific areas where initiation, memory, or flexibility give you trouble, while other areas feel manageable. This could mean your executive function challenges are genuinely mild, or it could mean you've built your life around your limitations so effectively that the workarounds feel invisible.",
+        "recommendations": [
+          "Pay attention to the specific situations where executive function dips. Is it time of day? Type of task? Level of interest? Energy level? Knowing your patterns lets you schedule strategically instead of fighting your brain's natural rhythms.",
+          "Don't dismiss the challenges you do have just because they're not severe. Even mild executive function difficulties can create friction in relationships, work, and self-image if they go unacknowledged.",
+          "If your mild challenges are actually the result of excellent compensatory strategies, give yourself credit for the effort those strategies require. Coping well isn't the same as not struggling."
+        ],
+        "condition": { "executive": 18 }
+      },
+      {
+        "id": "managing-well",
+        "title": "Managing Well",
+        "emoji": "🌿",
+        "description": "Your responses suggest your executive function is currently working well for you. Tasks get started, information stays accessible, and transitions between activities don't cause major disruption. This is either your natural baseline or the result of a well-tuned set of strategies and an environment that supports your way of working. Either way, it's worth appreciating.",
+        "recommendations": [
+          "If executive function hasn't been a pain point for you, this result makes sense. Not everyone with neurodivergent traits has significant executive function challenges.",
+          "Keep in mind that executive function can degrade under stress, sleep deprivation, burnout, or major life changes. If this changes in the future, revisiting this assessment might help you identify which specific area is struggling.",
+          "If you came to this quiz expecting a higher score and your daily experience feels harder than these results suggest, consider whether you might be underreporting or whether the specific questions didn't capture your particular version of executive function challenges."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}

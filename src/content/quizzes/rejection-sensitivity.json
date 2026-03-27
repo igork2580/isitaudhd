@@ -1,0 +1,221 @@
+{
+  "id": "rejection-sensitivity",
+  "title": "Rejection Sensitivity in AuDHD",
+  "description": "A 15-question assessment exploring rejection sensitivity through the AuDHD lens. Covers emotional reactions, social interpretation patterns, and avoidance behaviors shaped by the overlap of literal processing and emotional intensity.",
+  "estimatedTime": "4 minutes",
+  "categories": ["emotional-reaction", "social-interpretation", "avoidance-behavior"],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "When someone gives me constructive criticism, my first response is a visceral emotional hit (chest tightening, tears, anger) before I can process the actual content of what they said.",
+      "type": "likert",
+      "category": "emotional-reaction",
+      "weight": 1
+    },
+    {
+      "id": "q2",
+      "text": "A single negative comment can erase weeks of positive feedback. My brain holds onto the criticism and replays it on loop while the compliments evaporate.",
+      "type": "likert",
+      "category": "emotional-reaction",
+      "weight": 1
+    },
+    {
+      "id": "q3",
+      "text": "Your friend takes 12 hours to reply to a text that you thought was important. What happens inside you?",
+      "type": "scenario",
+      "category": "emotional-reaction",
+      "weight": 1,
+      "options": [
+        {
+          "label": "My brain cycles through increasingly catastrophic explanations. They're mad at me. I said something wrong. They're pulling away. I analyze our last conversation word by word, looking for what I did. By the time they reply normally, I'm emotionally wrecked.",
+          "value": 4
+        },
+        {
+          "label": "I might notice the delay or feel slightly anxious, but it doesn't consume my thoughts. People get busy.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "When I perceive rejection (real or imagined), the emotional intensity is so overwhelming that it feels physical. Nausea, chest pain, inability to breathe properly.",
+      "type": "likert",
+      "category": "emotional-reaction",
+      "weight": 1
+    },
+    {
+      "id": "q5",
+      "text": "I swing between people-pleasing (doing anything to avoid rejection) and preemptive withdrawal (rejecting others before they can reject me), sometimes within the same relationship.",
+      "type": "likert",
+      "category": "emotional-reaction",
+      "weight": 1
+    },
+    {
+      "id": "q6",
+      "text": "I interpret neutral or ambiguous social signals as negative. A flat tone of voice, an unreturned wave, a short email. My default assumption is that something is wrong and it's about me.",
+      "type": "likert",
+      "category": "social-interpretation",
+      "weight": 1
+    },
+    {
+      "id": "q7",
+      "text": "I overanalyze conversations after they happen, searching for signs that I said something wrong, weird, or offensive. This replay can last hours or days.",
+      "type": "likert",
+      "category": "social-interpretation",
+      "weight": 1
+    },
+    {
+      "id": "q8",
+      "text": "You share an idea in a meeting and nobody responds immediately. What goes through your mind?",
+      "type": "scenario",
+      "category": "social-interpretation",
+      "weight": 1,
+      "options": [
+        {
+          "label": "Instant shame spiral. The idea was stupid. Everyone thinks less of me now. I should never have spoken up. I spend the rest of the meeting replaying the silence and misreading every subsequent facial expression.",
+          "value": 4
+        },
+        {
+          "label": "It's a bit awkward, but I figure they're processing or the moment passed. I don't read it as a judgment about me personally.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "I struggle to distinguish between someone being busy, distracted, or having a bad day versus someone being upset with me specifically. My brain defaults to \"it's about me.\"",
+      "type": "likert",
+      "category": "social-interpretation",
+      "weight": 1
+    },
+    {
+      "id": "q10",
+      "text": "When someone uses sarcasm, teasing, or an indirect communication style, I can't always tell if they're being friendly or hostile. So I assume hostile and react accordingly, either by shutting down or getting defensive.",
+      "type": "likert",
+      "category": "social-interpretation",
+      "weight": 1
+    },
+    {
+      "id": "q11",
+      "text": "I avoid asking for things I need (a raise, a favor, a boundary) because the possibility of hearing \"no\" feels too dangerous to risk.",
+      "type": "likert",
+      "category": "avoidance-behavior",
+      "weight": 1
+    },
+    {
+      "id": "q12",
+      "text": "You want to join a new club, class, or social group. What actually happens?",
+      "type": "scenario",
+      "category": "avoidance-behavior",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I research it obsessively, imagine all the ways I could be rejected or not fit in, and then never go. Or I attend once, perceive a minor social misstep, and never return.",
+          "value": 4
+        },
+        {
+          "label": "I might feel nervous, but the fear of rejection doesn't override my interest. I show up and figure it out.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "I've turned down opportunities (jobs, relationships, creative projects, public speaking) because the risk of being judged or rejected felt more threatening than the regret of missing out.",
+      "type": "likert",
+      "category": "avoidance-behavior",
+      "weight": 1
+    },
+    {
+      "id": "q14",
+      "text": "You wrote a heartfelt comment on a friend's social media post and it got no likes or replies. What do you do?",
+      "type": "scenario",
+      "category": "avoidance-behavior",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I delete it within the hour, convinced it was weird or inappropriate. I replay the wording in my head and cringe. I might avoid that person's posts for weeks because the non-response felt like a public rejection.",
+          "value": 4
+        },
+        {
+          "label": "I might notice, but it doesn't bother me much. Social media engagement is unpredictable and I don't take it personally.",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "A friend invites you to a party where you'll only know one person. What do you actually do?",
+      "type": "scenario",
+      "category": "avoidance-behavior",
+      "weight": 1,
+      "options": [
+        {
+          "label": "I either decline immediately (\"I'm busy\") or say yes and then cancel last minute. The thought of navigating a room of strangers who might find me awkward, boring, or \"too much\" is genuinely unbearable.",
+          "value": 4
+        },
+        {
+          "label": "I might feel some social anxiety, but it doesn't prevent me from going. Worst case, I stick close to the friend I know.",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "type": "multi-axis",
+    "axes": ["rsd"],
+    "maxPerAxis": 60,
+    "profiles": [
+      {
+        "id": "high-sensitivity",
+        "title": "High Rejection Sensitivity",
+        "emoji": "🌊",
+        "description": "Your responses indicate intense rejection sensitivity that's likely affecting your relationships, career choices, and daily emotional experience. In AuDHD, this gets compounded in a specific way: the autistic brain processes social information literally and can miss context that would soften a perceived slight, while the ADHD brain reacts with immediate, intense emotion before logic has a chance to intervene. The result is a one-two punch where you misread neutral situations as rejection AND feel that misread rejection at maximum volume. This isn't you being \"too sensitive.\" Your nervous system is genuinely processing social threat signals differently.",
+        "recommendations": [
+          "Learn to identify the rejection sensitivity spiral in real time. The pattern usually goes: ambiguous social cue, instant emotional flooding, catastrophic interpretation, avoidance or people-pleasing response. Catching it at step one (before the flood) gives you a window to pause and reality-check.",
+          "Build a \"check before you react\" habit with a trusted person. When your brain says \"they hate me,\" text that person and ask for an outside perspective before acting on the feeling. Over time, this builds an alternative interpretation library your brain can draw from.",
+          "Practice distinguishing between the intensity of the feeling and the accuracy of the interpretation. The emotion is real. The interpretation might not be. Both things can be true simultaneously.",
+          "Consider whether medication might help with the intensity of the emotional response. RSD in ADHD sometimes responds to stimulant medication or alpha-agonists. A clinician familiar with ADHD emotional dysregulation can help evaluate this."
+        ],
+        "condition": { "rsd": 42 }
+      },
+      {
+        "id": "moderate-sensitivity",
+        "title": "Moderate Rejection Sensitivity",
+        "emoji": "🌧️",
+        "description": "Your responses show meaningful rejection sensitivity that probably shapes some of your decisions and social patterns, even if it doesn't control them entirely. You likely have some situations where the sensitivity spikes (certain people, specific contexts, particular types of feedback) and others where you manage it reasonably well. The AuDHD flavor might show up as spending hours overanalyzing a social interaction your ADHD brain barely registered in the moment, or avoiding situations where your literal processing style has gotten you burned before.",
+        "recommendations": [
+          "Map your triggers. Which specific situations activate rejection sensitivity most intensely? Criticism from authority figures? Ambiguous social cues? Romantic interest? Group settings? Knowing your specific pattern helps you prepare for high-risk moments instead of being blindsided.",
+          "Work on separating observation from interpretation. \"They didn't laugh at my joke\" is an observation. \"They think I'm unfunny and weird\" is an interpretation. Practice staying at the observation level longer before your brain fills in the story.",
+          "After a rejection sensitivity episode passes, journal about it briefly. What triggered it? What did your brain tell you? What actually happened? Over time, this creates a record that your catastrophic predictions rarely come true, which builds resilience.",
+          "Be honest with close friends or partners about this pattern. \"When you use a short tone, my brain interprets it as anger at me\" isn't needy. It's useful information that helps people communicate with you more effectively."
+        ],
+        "condition": { "rsd": 25 }
+      },
+      {
+        "id": "mild-sensitivity",
+        "title": "Mild Rejection Sensitivity",
+        "emoji": "🌤️",
+        "description": "Your responses suggest some rejection sensitivity, but it's not a dominant force in your daily life. You might notice it in specific situations or with particular people, but it doesn't consistently prevent you from taking social risks, accepting feedback, or putting yourself out there. This might mean your sensitivity is genuinely mild, or it might mean you've built effective coping strategies over time.",
+        "recommendations": [
+          "Notice the situations where sensitivity does flare up. Even mild rejection sensitivity can be useful information about which relationships or environments feel less safe to you.",
+          "If you noticed the sensitivity was higher in the past than it is now, reflect on what changed. Understanding your own recovery path can be valuable, both for maintaining it and for helping others who are still in the thick of it.",
+          "Don't dismiss the emotional reactions you do have as overreacting. Even at a mild level, rejection sensitivity responses are real neurological events, not character flaws."
+        ],
+        "condition": { "rsd": 12 }
+      },
+      {
+        "id": "low-sensitivity",
+        "title": "Low Rejection Sensitivity",
+        "emoji": "🌿",
+        "description": "Your responses don't indicate significant rejection sensitivity based on this assessment. Social feedback, criticism, and ambiguous interactions don't appear to trigger the intense emotional responses characteristic of RSD. This is a genuine strength in navigating relationships and professional environments, and it's worth recognizing as one less thing competing for your emotional bandwidth.",
+        "recommendations": [
+          "If this result surprises you and you feel like rejection does affect you, consider whether the specific scenarios in this quiz captured your experience. Rejection sensitivity can be domain-specific (romantic but not professional, or vice versa).",
+          "If you're close to someone with high rejection sensitivity, understanding how different your experiences are can prevent misunderstandings. What feels like a minor comment to you might land as a devastating blow to them, and that difference is neurological, not dramatic.",
+          "Low rejection sensitivity doesn't mean you're emotionally unaffected by social situations. It means the specific pattern of catastrophic emotional response to perceived rejection isn't a major factor for you."
+        ],
+        "condition": {}
+      }
+    ]
+  }
+}
