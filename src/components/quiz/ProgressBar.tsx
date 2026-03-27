@@ -14,7 +14,7 @@ export function ProgressBar({ current, total }: Props) {
       </div>
       <div className="h-1 bg-[--color-border] rounded-full overflow-hidden">
         <div
-          className="h-full bg-[--color-text] rounded-full transition-all duration-300 ease-out"
+          className="h-full bg-[--color-primary] rounded-full transition-all duration-300 ease-out"
           style={{ width: `${percentage}%` }}
         />
       </div>

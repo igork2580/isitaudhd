@@ -63,7 +63,7 @@ export function QuestionCard({ question, selectedValue, onAnswer, questionNumber
                 className={`
                   w-full text-left px-3.5 py-2.5 rounded-lg text-sm transition-colors
                   ${isSelected
-                    ? 'bg-[--color-text] text-white'
+                    ? 'bg-[--color-btn] text-[--color-btn-text]'
                     : 'text-[--color-text] hover:bg-[--color-muted]'
                   }
                 `}

@@ -60,7 +60,7 @@ export function QuizResults({ quiz, results, shareCode, onRestart }: Props) {
               </div>
               <div className="h-1.5 bg-[--color-border] rounded-full overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-[--color-text] transition-all duration-500 ease-out"
+                  className="h-full rounded-full bg-[--color-primary] transition-all duration-500 ease-out"
                   style={{ width: `${Math.min(percentages[axis] || 0, 100)}%` }}
                 />
               </div>
@@ -106,7 +106,7 @@ export function QuizResults({ quiz, results, shareCode, onRestart }: Props) {
         >
           <input type="email" name="email" placeholder="your@email.com" required aria-label="Email"
             className="flex-1 px-3 py-2 rounded-md border border-[--color-border] bg-[--color-surface] text-sm text-[--color-text] focus:border-[--color-text]/30 focus:outline-none" />
-          <button type="submit" className="text-sm font-medium text-white bg-[--color-text] px-4 py-2 rounded-md hover:bg-[--color-text]/80 transition-colors flex-shrink-0">
+          <button type="submit" className="text-sm font-medium text-[--color-btn-text] bg-[--color-btn] px-4 py-2 rounded-md hover:bg-[--color-btn]/80 transition-colors flex-shrink-0">
             Send
           </button>
         </form>

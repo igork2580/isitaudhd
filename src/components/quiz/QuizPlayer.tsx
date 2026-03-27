@@ -145,7 +145,7 @@ export function QuizPlayer({ quiz }: Props) {
         <button
           onClick={handleNext}
           disabled={!hasCurrentAnswer}
-          className="text-sm font-medium text-white bg-[--color-text] px-5 py-2 rounded-md hover:bg-[--color-text]/80 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+          className="text-sm font-medium text-[--color-btn-text] bg-[--color-btn] px-5 py-2 rounded-md hover:bg-[--color-btn]/80 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           {isLastQuestion ? 'See Results' : 'Continue'} &rarr;
         </button>
