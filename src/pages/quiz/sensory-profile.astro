@@ -9,19 +9,14 @@ import quizData from '../../content/quizzes/sensory-profile.json';
   description="Explore your sensory patterns with this free quiz. Are you a sensory seeker, avoider, or the chaotic mix that defines AuDHD? Takes 4-5 minutes."
   breadcrumbs={[{ label: 'Quizzes', href: '/quiz/' }, { label: 'Sensory Profile', href: '/quiz/sensory-profile/' }]}
 >
-  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
-    <header class="text-center mb-10">
-      <h1 class="text-3xl sm:text-4xl font-bold text-text">
-        AuDHD <span class="text-primary">Sensory Profile</span>
+  <article class="max-w-2xl mx-auto px-5 py-12">
+    <header class="mb-10">
+      <h1 class="text-2xl sm:text-3xl font-bold text-text">
+        AuDHD Sensory Profile
       </h1>
-      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
-        The AuDHD sensory experience is a paradox: craving stimulation and being overwhelmed by it at the same time. This quiz maps your sensory patterns — seeking, avoiding, or the chaotic mix of both.
+      <p class="mt-3 text-[0.9375rem] text-text-light leading-relaxed max-w-lg">
+        Map your sensory patterns -- seeking, avoiding, or the chaotic mix of both. 20 questions, takes about 5 minutes. Your answers stay private.
       </p>
-      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
-        <span>🕐 {quizData.estimatedTime}</span>
-        <span class="w-1 h-1 rounded-full bg-border"></span>
-        <span>📝 {quizData.questions.length} questions</span>
-      </div>
     </header>
     <QuizPlayer quiz={quizData} client:load />
   </article>

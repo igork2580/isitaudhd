@@ -9,23 +9,14 @@ import quizData from '../../content/quizzes/autism-or-adhd.json';
   description="Not sure if it's autism, ADHD, or AuDHD? This free 20-question quiz helps you explore where your traits lean. Takes 4-6 minutes."
   breadcrumbs={[{ label: 'Quizzes', href: '/quiz/' }, { label: 'Autism or ADHD?', href: '/quiz/autism-or-adhd/' }]}
 >
-  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
-    <header class="text-center mb-10">
-      <h1 class="text-3xl sm:text-4xl font-bold text-text">
-        Autism, ADHD, or <span class="text-primary">Both?</span>
+  <article class="max-w-2xl mx-auto px-5 py-12">
+    <header class="mb-10">
+      <h1 class="text-2xl sm:text-3xl font-bold text-text">
+        Autism, ADHD, or Both?
       </h1>
-      <p class="mt-4 text-lg text-text-light max-w-2xl mx-auto leading-relaxed">
-        Autism and ADHD share some surface similarities but differ in important ways.
-        This quiz helps you explore which traits feel most like your experience — and
-        whether the overlap (AuDHD) might be the best fit.
+      <p class="mt-3 text-[0.9375rem] text-text-light leading-relaxed max-w-lg">
+        Explore which traits feel most like your experience and whether AuDHD might be the best fit. 20 questions, takes about 6 minutes. Your answers stay private.
       </p>
-      <div class="flex items-center justify-center gap-4 mt-4 text-sm text-text-light">
-        <span>🕐 {quizData.estimatedTime}</span>
-        <span class="w-1 h-1 rounded-full bg-border"></span>
-        <span>📝 {quizData.questions.length} questions</span>
-        <span class="w-1 h-1 rounded-full bg-border"></span>
-        <span>🔒 Private</span>
-      </div>
     </header>
 
     <QuizPlayer quiz={quizData} client:load />

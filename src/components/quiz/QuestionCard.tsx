@@ -9,41 +9,41 @@ interface Props {
 }
 
 const LIKERT_OPTIONS = [
-  { label: 'Strongly Disagree', value: 0 },
-  { label: 'Disagree', value: 1 },
-  { label: 'Neutral', value: 2 },
-  { label: 'Agree', value: 3 },
-  { label: 'Strongly Agree', value: 4 },
+  { label: 'Strongly Disagree', shortKey: '1', value: 0 },
+  { label: 'Disagree', shortKey: '2', value: 1 },
+  { label: 'Neutral', shortKey: '3', value: 2 },
+  { label: 'Agree', shortKey: '4', value: 3 },
+  { label: 'Strongly Agree', shortKey: '5', value: 4 },
 ];
 
 const FREQUENCY_OPTIONS = [
-  { label: 'Never', value: 0 },
-  { label: 'Rarely', value: 1 },
-  { label: 'Sometimes', value: 2 },
-  { label: 'Often', value: 3 },
-  { label: 'Always', value: 4 },
+  { label: 'Never', shortKey: '1', value: 0 },
+  { label: 'Rarely', shortKey: '2', value: 1 },
+  { label: 'Sometimes', shortKey: '3', value: 2 },
+  { label: 'Often', shortKey: '4', value: 3 },
+  { label: 'Always', shortKey: '5', value: 4 },
 ];
 
-export function QuestionCard({ question, selectedValue, onAnswer, questionNumber }: Props) {
+export function QuestionCard({ question, selectedValue, onAnswer }: Props) {
   const options =
     question.type === 'scenario'
-      ? question.options || []
+      ? (question.options || []).map((o, i) => ({ ...o, shortKey: String.fromCharCode(65 + i) }))
       : question.type === 'frequency'
         ? FREQUENCY_OPTIONS
         : LIKERT_OPTIONS;
 
   return (
-    <div className="bg-[--color-surface] rounded-xl border border-[--color-border] p-5 sm:p-6">
-      <h3
-        className="text-[0.9375rem] sm:text-base font-medium text-[--color-text] leading-relaxed"
+    <div>
+      <p
+        className="text-base sm:text-lg text-[--color-text] leading-relaxed"
         id={`question-${question.id}`}
       >
         {question.text}
-      </h3>
+      </p>
 
-      <fieldset className="mt-5" aria-labelledby={`question-${question.id}`}>
+      <fieldset className="mt-6" aria-labelledby={`question-${question.id}`}>
         <legend className="sr-only">{question.text}</legend>
-        <div className="space-y-2" role="radiogroup">
+        <div className="space-y-2.5" role="radiogroup">
           {options.map((option, index) => {
             const isSelected = selectedValue === option.value;
             return (
@@ -64,22 +64,23 @@ export function QuestionCard({ question, selectedValue, onAnswer, questionNumber
                   }
                 }}
                 className={`
-                  w-full text-left px-3.5 py-2.5 rounded-lg text-[0.8125rem] border transition-all
+                  w-full text-left px-4 py-3.5 rounded-xl text-sm transition-all flex items-center gap-3
                   ${isSelected
-                    ? 'border-[--color-primary] bg-[--color-primary-soft] text-[--color-text] font-medium'
-                    : 'border-[--color-border] text-[--color-text] hover:border-[--color-text-light]/40 hover:bg-[--color-muted]/50'
+                    ? 'bg-[--color-primary] text-white shadow-sm'
+                    : 'bg-[--color-surface] border border-[--color-border] text-[--color-text] hover:border-[--color-primary]/50'
                   }
                 `}
               >
-                <span className="flex items-center gap-2.5">
-                  <span className={`
-                    w-4 h-4 rounded-full border-[1.5px] flex-shrink-0 flex items-center justify-center transition-all
-                    ${isSelected ? 'border-[--color-primary] bg-[--color-primary]' : 'border-[--color-border]'}
-                  `}>
-                    {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
-                  </span>
-                  {option.label}
+                <span className={`
+                  w-6 h-6 rounded-md text-[11px] font-semibold flex items-center justify-center flex-shrink-0
+                  ${isSelected
+                    ? 'bg-white/20 text-white'
+                    : 'bg-[--color-muted] text-[--color-text-light]'
+                  }
+                `}>
+                  {option.shortKey}
                 </span>
+                <span className={isSelected ? 'font-medium' : ''}>{option.label}</span>
               </button>
             );
           })}
